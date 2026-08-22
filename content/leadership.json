@@ -1,0 +1,58 @@
+{
+  "eyebrow": { "kn": "೦೫ — ನೇತೃತ್ವ", "en": "05 — Leadership" },
+  "heading": {
+    "kn": "ಟ್ರಸ್ಟಿಗಳು, ಕಾರ್ಯನಿರ್ವಾಹಕ ಸಮಿತಿ ಮತ್ತು ಸಲಹಾ ಮಂಡಳಿ",
+    "en": "Trustees, Executive Committee & Advisory Board"
+  },
+  "groups": [
+    {
+      "title": { "kn": "ಟ್ರಸ್ಟಿಗಳು", "en": "Trustees" },
+      "members": [
+        { "name": "ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯ", "nameEn": "Dr. Anandarama Upadhya", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ · ಕಾರ್ಯಾಧ್ಯಕ್ಷ", "en": "Founder Trustee & Chairperson (Executive)" } },
+        { "name": "ನಟರಾಜ ಉಪಾಧ್ಯ", "nameEn": "Nataraja Upadhya", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ", "en": "Founder Trustee" } },
+        { "name": "ರವಿ ಮಡೋಡಿ", "nameEn": "Ravi Madodi", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ · ಖಜಾಂಚಿ", "en": "Founder Trustee & Treasurer" } },
+        { "name": "ಅಜಿತ್ ಕಾರಂತ", "nameEn": "Ajit Karanth", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Joint Secretary" } },
+        { "name": "ಸುಹಾಸ್ ಮರಾಠೆ", "nameEn": "Suhas Marathe", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Secretary" } },
+        { "name": "ಉಮೇಶ್ ಶಿರೂರು", "nameEn": "Umesh Sirooru", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Joint Secretary" } }
+      ]
+    },
+    {
+      "title": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ ಮಂಡಳಿ", "en": "Honorary Board of Directors" },
+      "members": [
+        { "name": "ಪ್ರೊ. ಎಂ. ಲಕ್ಷ್ಮೀನಾರಾಯಣ ಸಾಮಗ", "nameEn": "Prof. M. Lakshminarayana Samaga", "role": { "kn": "ಗೌರವಾಧ್ಯಕ್ಷ", "en": "Honorary Chairperson" } },
+        { "name": "ಶ್ರೀಧರ ಡಿ. ಎಸ್.", "nameEn": "Sridhara D. S.", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } },
+        { "name": "ಗಿಂಡೀಮನೆ ಮೃತ್ಯುಂಜಯ", "nameEn": "Gindimane Mrutyunjaya", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } },
+        { "name": "ಅನಂತಪದ್ಮನಾಭ ಪಾಠಕ್", "nameEn": "Anantapadmanabha Pathak", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } }
+      ]
+    },
+    {
+      "title": { "kn": "ಖಾಯಂ ಆಹ್ವಾನಿತರು ಹಾಗೂ ಲೆಕ್ಕ ಪರಿಶೋಧಕರು", "en": "Permanent Invitees & Auditors" },
+      "members": [
+        { "name": "ಇಟಗಿ ಮಹಾಬಲೇಶ್ವರ ಭಟ್", "nameEn": "Itagi Mahabaleshwara Bhat", "role": { "kn": "ಖಾಯಂ ಆಹ್ವಾನಿತರು", "en": "Permanent Invitee" } },
+        { "name": "ಲ. ನಾ. ಭಟ್", "nameEn": "L. N. Bhat", "role": { "kn": "ಖಾಯಂ ಆಹ್ವಾನಿತರು", "en": "Permanent Invitee" } },
+        { "name": "ಚಂದ್ರಶೇಖರ ಕಾರಂತ", "nameEn": "Chandrashekar Karanth", "role": { "kn": "ಹಾಲಿ ಲೆಕ್ಕ ಪರಿಶೋಧಕರು", "en": "Current Auditor" } },
+        { "name": "ರಾಘವೇಂದ್ರ ಮಯ್ಯ", "nameEn": "Raghavendra Maiya", "role": { "kn": "ಈ ಹಿಂದಿನ ಲೆಕ್ಕ ಪರಿಶೋಧಕರು", "en": "Former Auditor" } }
+      ]
+    }
+  ],
+  "advisoryBoard": {
+    "heading": { "kn": "ಗೌರವಾನ್ವಿತ ಸಲಹಾ ಮಂಡಳಿ", "en": "Honorary Advisory Board" },
+    "note": {
+      "kn": "ಇತರ ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ಸಹಯೋಗ ಹೆಚ್ಚಿದಂತೆ ಈ ಮಂಡಳಿಯು ಬೆಳೆಯುತ್ತಲೇ ಹೋಗುತ್ತದೆ.",
+      "en": "This board keeps growing as collaboration with other organizations expands."
+    },
+    "names": [
+      "ಡಾ. ಕಬ್ಬಿನಾಲೆ ವಸಂತ ಭಾರದ್ವಾಜ", "ಡಾ. ಎಂ ಪ್ರಭಾಕರ ಜೋಶಿ", "ಡಾ. ಪಾದೇಕಲ್ಲು ವಿಷ್ಣು ಭಟ್",
+      "ಪುತ್ತೂರು ರಮೇಶ ಭಟ್", "ದಿನೇಶ ಉಪ್ಪೂರ ಎಂ. ಎನ್.", "ಡಾ. ಪ್ರದೀಪ ಸಾಮಗ",
+      "ವಿದುಷಿ ಸುಮಂಗಲಾ ರತ್ನಾಕರ್", "ಡಾ. ಸಿಬಂತಿ ಪದ್ಮನಾಭ", "ಶ್ರೀಮತಿ ಆರತಿ ಪಟ್ರಮೆ",
+      "ಲಕ್ಷ್ಮಿ ಮಚ್ಚಿನ", "ಗಣರಾಜ ಕುಂಬ್ಳೆ", "ಅವಿನಾಶ್ ಬೈಪಡಿತ್ತಾಯ",
+      "ಡಾ. ಶಿವಕುಮಾರ್ ಬೇಗಾರ್", "ಡಾ. ರಾಧಾಕೃಷ್ಣ ಉರಾಳ", "ರಾಜಗೋಪಾಲ ಕನ್ಯಾನ",
+      "ನಾರಾಯಣ ಹೆಗಡೆ (ಯಕ್ಷಗಾನ ಕಲಾರಂಗ)", "ಶಶಿರಾಜ ಸೋಮಯಾಜಿ (ಯಕ್ಷಸಿಂಚನ)", "ಹರಿಕೃಷ್ಣ ಹೊಳ್ಳ",
+      "ಡಾ. ಕಜೆ ಸುಬ್ರಹ್ಮಣ್ಯ ಭಟ್", "ವಸಂತಕೃಷ್ಣ ಪಟ್ಟಾಜೆ"
+    ]
+  },
+  "volunteersNote": {
+    "kn": "ಆಶ್ವಿನಿ ಹೊದಲ, ಅಶೋಕ ಮುಂಗಳಿಮನೆ, ಡಾ. ಶ್ರೀಕೃಷ್ಣ ಭಟ್ ಸುಣ್ಣಂಗುಳಿ, ವಿದ್ಯಾ ಹೆಗಡೆ ಕವಿತಾಸ್ಫೂರ್ತಿ ಸೇರಿದಂತೆ ಅನೇಕ ಸ್ವಯಂಸೇವಕರ ನಿಸ್ವಾರ್ಥ ಸೇವೆಗೆ ಸಂಸ್ಥೆಯು ಆಭಾರಿಯಾಗಿದೆ.",
+    "en": "Yakshavahini is deeply grateful to the many volunteers — including Ashwini Hodala, Ashok Mungalimane, Dr. Shrikrishna Bhat Sunnanguli, Vidya Hegde Kavitasphoorti and numerous others — whose selfless service powers every project."
+  }
+}

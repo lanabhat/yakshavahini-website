@@ -1,0 +1,56 @@
+{
+  "eyebrow": { "kn": "೦೬ — ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮ", "en": "06 — News & Events" },
+  "heading": { "kn": "ಇತ್ತೀಚಿನ ಸುದ್ದಿ", "en": "Latest News" },
+  "blogger": {
+    "_comment": "Aggregates posts from the org's main blog and its six project blogs. IMPORTANT: yakshavahini.com's main blog will move from the apex domain to a subdomain (see HOSTING.md) once the apex is repointed at the new static site — update the 'main' source's feedUrl to that new subdomain at that time, or this source will stop resolving.",
+    "maxPerSource": 4,
+    "maxTotal": 9,
+    "sources": [
+      { "id": "main", "name": { "kn": "ಸುದ್ದಿ", "en": "News" }, "feedUrl": "https://www.yakshavahini.com/feeds/posts/default" },
+      { "id": "prasangakosha", "name": { "kn": "ಪ್ರಸಂಗಕೋಶ", "en": "Prasangakosha" }, "feedUrl": "https://yakshaprasangakosha.yakshavahini.com/feeds/posts/default" },
+      { "id": "pratisangraha", "name": { "kn": "ಪ್ರತಿಸಂಗ್ರಹ", "en": "Prati Sangraha" }, "feedUrl": "https://prasangaprathisangraha.yakshavahini.com/feeds/posts/default" },
+      { "id": "mattukosha", "name": { "kn": "ಮಟ್ಟುಕೋಶ", "en": "Mattukosha" }, "feedUrl": "https://yakshamattukosha.yakshavahini.com/feeds/posts/default" },
+      { "id": "prasangayaadi", "name": { "kn": "ಪ್ರಸಂಗಪಟ್ಟಿ", "en": "Prasangapatti" }, "feedUrl": "https://yakshaprasangayaadi.yakshavahini.com/feeds/posts/default" },
+      { "id": "pustakayaadi", "name": { "kn": "ಪುಸ್ತಕಕೋಶ", "en": "Pustakakosha" }, "feedUrl": "https://yakshapusthakayaadi.yakshavahini.com/feeds/posts/default" },
+      { "id": "sanghatanakosha", "name": { "kn": "ಸಂಘಟನಾಕೋಶ", "en": "Sanghatanakosha" }, "feedUrl": "https://yakshasanghatanakosha.yakshavahini.com/feeds/posts/default" }
+    ]
+  },
+  "fallbackNote": {
+    "kn": "ಬ್ಲಾಗ್ ಕೊಂಡಿಗಳು ಸಂಪರ್ಕಗೊಳ್ಳುವವರೆಗೆ, ಇತ್ತೀಚಿನ ಕಾರ್ಯಕ್ರಮಗಳ ಪಟ್ಟಿ ಕೆಳಗಿದೆ.",
+    "en": "Until the blog feeds are connected, here are some recent programs."
+  },
+  "highlights": [
+    {
+      "tag": { "kn": "ಕಾರ್ಯಕ್ರಮ ಸರಣಿ", "en": "Program Series" },
+      "title": { "kn": "ಯಕ್ಷಸಾಹಿತ್ಯಸಾಂಗತ್ಯ", "en": "Yaksha Sahitya Sangatya" },
+      "description": {
+        "kn": "ನಾಡಿನ ಪ್ರಮುಖ ಸಾಹಿತಿಗಳಿಂದ ಯಕ್ಷಗಾನ ಪ್ರಸಂಗಗಳ ಸಾಹಿತ್ಯಿಕ ವಿಶ್ಲೇಷಣೆ — ಸುಮಾರು 25 ಕಂತುಗಳು, 3 ಲಕ್ಷಕ್ಕೂ ಅಧಿಕ ವೀಕ್ಷಣೆಗಳು.",
+        "en": "Literary analysis of Yakshagana prasangas by leading Kannada writers — around 25 episodes, 300,000+ views."
+      }
+    },
+    {
+      "tag": { "kn": "ಕಾರ್ಯಕ್ರಮ ಸರಣಿ", "en": "Program Series" },
+      "title": { "kn": "ಯಕ್ಷಕವಿ ನಮನ", "en": "Yaksha Kavi Namana" },
+      "description": {
+        "kn": "ಯಕ್ಷಗಾನ ಕವಿಗಳನ್ನು ಹಾಗೂ ಅವರ ಪ್ರಸಂಗ ಸಾಹಿತ್ಯದ ಸೊಬಗನ್ನು ಪರಿಚಯಿಸುವ ಗೌರವ ಕಾರ್ಯಕ್ರಮ ಸರಣಿ.",
+        "en": "A tribute series introducing Yakshagana poets and the literary richness of the prasangas they wrote."
+      }
+    },
+    {
+      "tag": { "kn": "ಕಾರ್ಯಕ್ರಮ ಸರಣಿ", "en": "Program Series" },
+      "title": { "kn": "ಯಕ್ಷಶೋಧಸಾರ", "en": "Yaksha Shodhasara" },
+      "description": {
+        "kn": "ಯಕ್ಷದೀವಿಗೆ (ತುಮಕೂರು) ಸಹಕಾರದಲ್ಲಿ ನಡೆದ ಯಕ್ಷಗಾನ ಸಂಶೋಧನೆ, ಅಧ್ಯಯನ ಹಾಗೂ ಪ್ರಯೋಗಗಳ ಸುತ್ತ ಉಪನ್ಯಾಸ ಸರಣಿ.",
+        "en": "A lecture series on Yakshagana research, study and experimentation, run with Yakshadeevige, Tumakuru."
+      }
+    },
+    {
+      "tag": { "kn": "ಪುಸ್ತಕ ಬಿಡುಗಡೆ", "en": "Book Release" },
+      "title": { "kn": "\"ಯಕ್ಷಸಂಕಾಶ\" ಲೋಕಾರ್ಪಣೆ", "en": "\"Yakshasankasha\" Launch" },
+      "description": {
+        "kn": "ಐಸಿರಿ ಪ್ರಕಾಶನದ ಸಹಯೋಗದಲ್ಲಿ ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯರ ಪುಸ್ತಕ ಲೋಕಾರ್ಪಣೆ.",
+        "en": "Launch of Dr. Anandarama Upadhya's book, in association with Isiri Prakashana."
+      }
+    }
+  ]
+}

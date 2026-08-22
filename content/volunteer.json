@@ -1,0 +1,26 @@
+{
+  "eyebrow": { "kn": "೦೭ — ಸ್ವಯಂಸೇವೆ", "en": "07 — Volunteer" },
+  "heading": {
+    "kn": "ಈ ಕೆಲಸ ಸ್ವಯಂಸೇವಕರಿಂದಲೇ ನಡೆಯುತ್ತದೆ",
+    "en": "This work runs entirely on volunteers"
+  },
+  "intro": {
+    "kn": "ವಾರಕ್ಕೆ ಒಂದು ಗಂಟೆ ಸಮಯವಿದ್ದರೂ ಸಾಕು — ನಿಮ್ಮ ಆಸಕ್ತಿಗೆ ಹೊಂದುವ ಕೆಲಸ ಇದೆ.",
+    "en": "Even one hour a week is enough — there's work here to match your interest."
+  },
+  "ways": [
+    { "code": "01", "label": { "kn": "ಡಿಜಿಟಲೀಕರಣ", "en": "Digitization" } },
+    { "code": "02", "label": { "kn": "ಒಸಿಆರ್ ತಿದ್ದುಪಡಿ", "en": "OCR Correction" } },
+    { "code": "03", "label": { "kn": "ಕರಡು ತಿದ್ದುವಿಕೆ", "en": "Proofreading" } },
+    { "code": "04", "label": { "kn": "ಸ್ಕ್ಯಾನಿಂಗ್", "en": "Scanning" } },
+    { "code": "05", "label": { "kn": "ತಂತ್ರಾಂಶ ಅಭಿವೃದ್ಧಿ", "en": "Software Development" } },
+    { "code": "06", "label": { "kn": "ದಾಖಲೀಕರಣ", "en": "Documentation" } },
+    { "code": "07", "label": { "kn": "ಸಂಶೋಧನೆ", "en": "Research" } }
+  ],
+  "cta": { "kn": "ಸೇರಲು ಸಂಪರ್ಕಿಸಿ", "en": "Get in touch to join" },
+  "coordinators": [
+    { "name": "ಸುಹಾಸ್ ಮರಾಠೆ", "nameEn": "Suhas Marathe", "phone": "99404 69916" },
+    { "name": "ಉಮೇಶ ಶಿರೂರು", "nameEn": "Umesh Sirooru", "phone": "94483 53910" },
+    { "name": "ಲ. ನಾ. ಭಟ್", "nameEn": "L. N. Bhat", "phone": "77608 23455" }
+  ]
+}

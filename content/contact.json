@@ -1,0 +1,24 @@
+{
+  "eyebrow": { "kn": "೦೯ — ಸಂಪರ್ಕ", "en": "09 — Contact" },
+  "heading": { "kn": "ಬರೆಯಿರಿ, ಮಾತನಾಡಿ", "en": "Write to Us, Talk to Us" },
+  "email": { "label": { "kn": "ಇಮೇಲ್", "en": "Email" }, "value": "yakshavahini@gmail.com" },
+  "website": { "label": { "kn": "ವೆಬ್‌ಸೈಟ್", "en": "Website" }, "value": "yakshavahini.com" },
+  "prasangaLibrary": {
+    "label": { "kn": "ಪ್ರತಿ ಸಂಗ್ರಹ", "en": "Prasanga Library" },
+    "value": "prasangapustaka.web.app"
+  },
+  "address": {
+    "label": { "kn": "ವಿಳಾಸ", "en": "Address" },
+    "value": { "kn": "ಯಕ್ಷವಾಹಿನಿ (ರಿ), ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ, ಭಾರತ", "en": "Yakshavahini (Regd.), Bengaluru, Karnataka, India" }
+  },
+  "social": [
+    { "label": "YouTube", "icon": "youtube", "href": "https://www.youtube.com/@YakshaVahiniPrathistana" },
+    { "label": "Facebook", "icon": "facebook", "href": "https://www.facebook.com/yakshavahini" },
+    { "label": "Telegram", "icon": "telegram", "href": "https://t.me/yakshavahini" },
+    { "label": "WhatsApp group", "icon": "whatsapp", "href": "https://chat.whatsapp.com/BayFDiyWfgUL1UjkgpXnc2" }
+  ],
+  "copyright": {
+    "kn": "© {year} ಯಕ್ಷವಾಹಿನಿ (ರಿ) — ಮುಂದಿನ ಪೀಳಿಗೆಗಾಗಿ ದಾಖಲೀಕರಣ ಮತ್ತು ಸಂರಕ್ಷಣೆ.",
+    "en": "© {year} Yakshavahini (Regd.) — Documentation and preservation for the next generation."
+  }
+}

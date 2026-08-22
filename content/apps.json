@@ -1,0 +1,33 @@
+{
+  "eyebrow": { "kn": "೦೩.೧ — ಆ್ಯಪ್‌ಗಳು", "en": "03.1 — Apps" },
+  "heading": { "kn": "ಮೊಬೈಲ್ ಮತ್ತು ವೆಬ್ ಆ್ಯಪ್‌ಗಳು", "en": "Mobile & Web Apps" },
+  "intro": {
+    "kn": "ನಮ್ಮ ಡಿಜಿಟಲ್ ಸಂಗ್ರಹಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಲು ಇವು ಸಹಕಾರಿ.",
+    "en": "Use these to browse our digital archives."
+  },
+  "_comment": "Add playStoreUrl once the Android app is back online; status/note can be cleared then.",
+  "items": [
+    {
+      "name": { "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ — ವೆಬ್", "en": "Prasanga Prati Sangraha — Web" },
+      "platform": "web",
+      "description": {
+        "kn": "1861+ ಪ್ರಸಂಗ ಪ್ರತಿಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ, ಉಚಿತವಾಗಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿಕೊಳ್ಳಿ.",
+        "en": "Browse and freely download 1,861+ scanned prasanga copies."
+      },
+      "url": "https://prasangapustaka.web.app/home",
+      "cta": { "kn": "ವೆಬ್ ಆ್ಯಪ್ ತೆರೆಯಿರಿ", "en": "Open Web App" },
+      "status": "live"
+    },
+    {
+      "name": { "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ — ಆಂಡ್ರಾಯ್ಡ್", "en": "Prasanga Prati Sangraha — Android" },
+      "platform": "android",
+      "description": {
+        "kn": "ಲ. ನಾ. ಭಟ್ ಅವರು ರೂಪಿಸಿದ ಮೊಬೈಲ್ ಆ್ಯಪ್. ಇತ್ತೀಚೆಗೆ ತಾಂತ್ರಿಕ ಕಾರಣಗಳಿಂದ ತಾತ್ಕಾಲಿಕವಾಗಿ ಸ್ಥಗಿತವಿದ್ದು, ಅಲ್ಲಿಯವರೆಗೆ ಮೇಲಿನ ವೆಬ್ ಆ್ಯಪ್ ಬಳಸಿ.",
+        "en": "Built by L. N. Bhat. Temporarily offline for technical reasons — use the web app above in the meantime."
+      },
+      "url": "",
+      "cta": { "kn": "ತಾತ್ಕಾಲಿಕವಾಗಿ ಲಭ್ಯವಿಲ್ಲ", "en": "Temporarily unavailable" },
+      "status": "paused"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "eyebrow": { "kn": "೦೪ — ಸಾಧನೆ", "en": "04 — Achievements" },
+  "heading": {
+    "kn": "ಒಂದು ದಶಕದ ಸಾಧನೆ, ಸಂಖ್ಯೆಗಳಲ್ಲಿ",
+    "en": "A Decade's Work, in Numbers"
+  },
+  "stats": [
+    { "value": "5000+", "label": { "kn": "ಪ್ರಸಂಗ ಪಟ್ಟಿ (ಯಕ್ಷಪ್ರಸಂಗಪಟ್ಟಿ)", "en": "Prasangas listed" } },
+    { "value": "270+", "label": { "kn": "ಪರಿಷ್ಕೃತ ಪ್ರಸಂಗಗಳು ಪ್ರಕಟ", "en": "Revised prasangas published" } },
+    { "value": "1861+", "label": { "kn": "ಪ್ರಸಂಗ ಪ್ರತಿಗಳ ಸಂಗ್ರಹ", "en": "Prasanga copies collected" } },
+    { "value": "100+", "label": { "kn": "ಮಟ್ಟುಗಳ ದಾಖಲೀಕರಣ", "en": "Mattus documented" } },
+    { "value": "300,000+", "label": { "kn": "ಯಕ್ಷಸಾಹಿತ್ಯಸಾಂಗತ್ಯ ವೀಕ್ಷಣೆಗಳು", "en": "Views on Yaksha Sahitya Sangatya" } }
+  ],
+  "highlight": {
+    "kn": "ಕರ್ನಾಟಕ ಯಕ್ಷಗಾನ ಅಕಾಡೆಮಿ ಹಾಗೂ ಕನ್ನಡ ಮತ್ತು ಸಂಸ್ಕೃತಿ ಇಲಾಖೆಯ (ಕರ್ನಾಟಕ ಸರ್ಕಾರ) ಪ್ರಾಯೋಜಕತ್ವದಲ್ಲಿ ಯಕ್ಷಪ್ರಸಂಗಗಳ ಡಿಜಿಟಲೀಕರಣ ಕಾರ್ಯ.",
+    "en": "Yakshagana prasanga digitization carried out with sponsorship from the Karnataka Yakshagana Academy and the Department of Kannada & Culture, Government of Karnataka."
+  }
+}

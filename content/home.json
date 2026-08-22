@@ -1,0 +1,26 @@
+{
+  "badge": {
+    "kn": "ಸ್ಥಾಪನೆ ೨೦೧೬ · ನೋಂದಾಯಿತ ಟ್ರಸ್ಟ್ ೨೦೧೭",
+    "en": "Est. 2016 · Registered Trust 2017"
+  },
+  "title": {
+    "kn": "ಯಕ್ಷವಾಹಿನಿ",
+    "en": "Yakshavahini"
+  },
+  "subtitle": {
+    "kn": "ಯಕ್ಷಗಾನದ ಸಾಹಿತ್ಯ, ಪ್ರಸಂಗ, ಮಟ್ಟು, ಸಂಘಟನೆಗಳು ಹಾಗೂ ಪರಂಪರೆಯನ್ನು ಡಿಜಿಟಲ್ ರೂಪದಲ್ಲಿ ಸಂರಕ್ಷಿಸಿ ವಿಶ್ವದಾದ್ಯಂತ ಉಚಿತವಾಗಿ ತಲುಪಿಸುವ ಸ್ವಯಂಸೇವಕರ ಸಾಂಸ್ಕೃತಿಕ ಸಂಸ್ಥೆ.",
+    "en": "A volunteer-driven cultural organization dedicated to preserving, digitizing and freely sharing Yakshagana literature, manuscripts, projects and heritage."
+  },
+  "lede": {
+    "kn": "ತೆಂಕುತಿಟ್ಟು, ಬಡಗುತಿಟ್ಟು ಹಾಗೂ ಎಲ್ಲಾ ತಿಟ್ಟುಗಳ ಪರಂಪರೆ — ಮುಂದಿನ ಪೀಳಿಗೆಗಾಗಿ, ಸ್ವಯಂಸೇವೆಯ ಬಲದಲ್ಲಿ ದಾಖಲಾಗುತ್ತಿದೆ.",
+    "en": "The heritage of every Yakshagana tradition — Tenkutittu, Badagutittu and beyond — being documented for the next generation, powered entirely by volunteers."
+  },
+  "cta": {
+    "primary": { "kn": "ಯೋಜನೆಗಳನ್ನು ನೋಡಿ", "en": "See Our Projects" },
+    "donate": { "kn": "ದೇಣಿಗೆ", "en": "Donate" }
+  },
+  "featuredPrasangaLabel": {
+    "kn": "ಪ್ರಸಂಗ ಪುಟ",
+    "en": "Prasanga Page"
+  }
+}

@@ -1,0 +1,6 @@
+# Legacy AI-artifact site, duplicate images, reference screenshots — not part of the live site
+supporting_content/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
