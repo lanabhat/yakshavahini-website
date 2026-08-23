@@ -8,7 +8,6 @@
     "kn": "ನಮ್ಮ ಡಿಜಿಟಲ್ ಸಂಗ್ರಹಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಲು ಇವು ಸಹಕಾರಿ.",
     "en": "Use these to browse our digital archives."
   },
-  "_comment": "Android item's url is a placeholder (yakshavahini.web.app) until the real Play Store link is ready - swap it in when available.",
   "items": [
     {
       "name": { "kn": "ಯಕ್ಷವಾಹಿನಿ - ವೆಬ್", "en": "Yakshavahini - Web" },
@@ -25,11 +24,11 @@
       "name": { "kn": "ಯಕ್ಷವಾಹಿನಿ - ಆಂಡ್ರಾಯ್ಡ್", "en": "Yakshavahini - Android" },
       "platform": "android",
       "description": {
-        "kn": "ಆಂಡ್ರಾಯ್ಡ್ ಆ್ಯಪ್.",
-        "en": "The Android app is coming soon."
+        "kn": "ಯಕ್ಷವಾಹಿನಿಯ ಡಿಜಿಟಲ್ ಕೋಶಗಳನ್ನು ಆಂಡ್ರಾಯ್ಡ್ ಆ್ಯಪ್‌ನಲ್ಲಿ ಬ್ರೌಸ್ ಮಾಡಿ.",
+        "en": "Browse Yakshavahini's digital koshas on Android."
       },
-      "url": "https://yakshavahini.web.app",
-      "cta": { "kn": "ಅನುಸ್ಥಾಪಿಸಿಕೊಳ್ಳಿ", "en": "Install from google play" },
+      "url": "https://play.google.com/store/apps/details?id=com.yakshavahini.app",
+      "cta": { "kn": "ಅನುಸ್ಥಾಪಿಸಿಕೊಳ್ಳಿ", "en": "Install from Google Play" },
       "status": "live"
     }
   ]
