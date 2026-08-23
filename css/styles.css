@@ -308,6 +308,7 @@ h3 { font-size: 1.25rem; }
   border-left: 3px solid var(--pink);
   background: rgba(255, 255, 255, 0.03);
   font-style: italic;
+  font-weight: 700;
   line-height: 1.7;
 }
 .about-photo { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border-light); margin-top: 20px; }
