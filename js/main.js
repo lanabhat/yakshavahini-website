@@ -14,6 +14,7 @@ function renderHome(data) {
         <div class="badge badge-sub" data-rv>${bi(data.badge)}</div>
         <p class="lede" data-rv>${bi(data.subtitle)}</p>
         <p class="lede muted" data-rv>${bi(data.lede)}</p>
+        <p class="hero-highlight" data-rv>${bi(data.highlight)}</p>
         <div class="hero-cta" data-rv>
           <a class="btn btn-gold" href="#projects">${bi(data.cta.primary)}</a>
           <a class="btn btn-donate" href="#donate">${bi(data.cta.donate)}</a>
@@ -229,7 +230,6 @@ function renderProjects(data) {
           <span class="coordinator">${p.coordinator}</span>
           <div class="project-card-links">
             ${p.slug ? `<a class="card-link" href="project.html?slug=${encodeURIComponent(p.slug)}">${bi({ kn: "ವಿವರ ನೋಡಿ", en: "Read more" })} →</a>` : ""}
-            ${p.blogUrl ? `<a class="card-link" href="${p.blogUrl}" target="_blank" rel="noopener">Visit blog →</a>` : ""}
           </div>
         </div>
       `).join("")}
