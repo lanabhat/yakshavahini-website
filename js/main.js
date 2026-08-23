@@ -1,45 +1,6 @@
-// Yakshavahini site — loads bilingual content from /content/*.json and renders it.
+// Yakshavahini home page - loads bilingual content from /content/*.json and renders it.
 // No build step, no framework: works on any static host that serves plain files.
-
-const CONTENT_BASE = "content";
-
-const SOCIAL_ICONS = {
-  youtube: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12Z"/></svg>',
-  facebook: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>',
-  telegram: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="m21.9 4.3-3.3 15.6c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.3-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 12.4l-5-1.6c-1.1-.3-1.1-1.1.2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3Z"/></svg>',
-  whatsapp: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17 14.3c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4ZM12 22a10 10 0 0 1-5.1-1.4L3 21.6l1-3.8A10 10 0 1 1 12 22Z"/></svg>',
-};
-
-function bi(field, tag = "span") {
-  if (!field) return "";
-  const kn = field.kn ?? "";
-  const en = field.en ?? "";
-  return `<${tag} lang="kn">${kn}</${tag}><${tag} lang="en">${en}</${tag}>`;
-}
-
-async function loadJSON(name) {
-  const res = await fetch(`${CONTENT_BASE}/${name}.json`, { cache: "no-cache" });
-  if (!res.ok) throw new Error(`Failed to load ${name}.json (${res.status})`);
-  return res.json();
-}
-
-function setLang(lang) {
-  document.body.classList.remove("lang-kn", "lang-en");
-  document.body.classList.add(`lang-${lang}`);
-  document.documentElement.lang = lang;
-  document.querySelectorAll(".lang-toggle button").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-  localStorage.setItem("yv-lang", lang);
-}
-
-function initLangToggle() {
-  const saved = localStorage.getItem("yv-lang") || "kn";
-  setLang(saved);
-  document.querySelectorAll(".lang-toggle button").forEach((btn) => {
-    btn.addEventListener("click", () => setLang(btn.dataset.lang));
-  });
-}
+// Shared helpers (bi, loadJSON, lang toggle, reveal, nav dropdown) live in common.js.
 
 // ---------- Section renderers ----------
 
@@ -266,7 +227,10 @@ function renderProjects(data) {
           <p>${bi(p.description)}</p>
           <div class="stat">${bi(p.stat)}</div>
           <span class="coordinator">${p.coordinator}</span>
-          ${p.blogUrl ? `<a class="card-link" href="${p.blogUrl}" target="_blank" rel="noopener">Visit blog →</a>` : ""}
+          <div class="project-card-links">
+            ${p.slug ? `<a class="card-link" href="project.html?slug=${encodeURIComponent(p.slug)}">${bi({ kn: "ವಿವರ ನೋಡಿ", en: "Read more" })} →</a>` : ""}
+            ${p.blogUrl ? `<a class="card-link" href="${p.blogUrl}" target="_blank" rel="noopener">Visit blog →</a>` : ""}
+          </div>
         </div>
       `).join("")}
     </div>
@@ -317,6 +281,7 @@ function renderLeadership(data) {
       <div class="leader-cards">
         ${g.members.map(m => `
           <div class="leader-card">
+            ${m.photo ? `<div class="leader-photo"><img src="images/portraits/${encodeURIComponent(m.photo)}" alt="${m.nameEn}" style="object-position: ${m.photoPosition || "center"}"></div>` : ""}
             <div class="name"><span lang="kn">${m.name}</span><span lang="en">${m.nameEn}</span></div>
             <div class="role">${bi(m.role)}</div>
           </div>
@@ -436,15 +401,6 @@ function renderBloggerEntry(entry) {
   `;
 }
 
-function shuffle(arr) {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 function renderVideos(data) {
   const el = document.getElementById("videos-content");
   if (!el) return;
@@ -486,11 +442,27 @@ function renderVolunteer(data) {
         <p class="muted">${bi(data.intro)}</p>
         <a class="btn btn-outline" href="#contact">${bi(data.cta)} →</a>
         <ul class="coordinator-list">
-          ${data.coordinators.map(c => `<li>${c.name} (${c.nameEn}) — ${c.phone}</li>`).join("")}
+          ${data.coordinators.map(c => `<li>${c.name} (${c.nameEn}) - ${c.phone}</li>`).join("")}
         </ul>
       </div>
       <div class="ways-grid" data-rv>
         ${data.ways.map(w => `<div class="way-card"><div class="code">${w.code}</div>${bi(w.label)}</div>`).join("")}
+      </div>
+    </div>
+    ${renderNameGroup(data.volunteerNames)}
+    ${renderNameGroup(data.organizationNames)}
+    ${renderNameGroup(data.contributorNames)}
+  `;
+}
+
+function renderNameGroup(group) {
+  if (!group) return "";
+  return `
+    <div class="name-group" data-rv>
+      <h3>${bi(group.heading)}</h3>
+      <p class="muted">${bi(group.note)}</p>
+      <div class="name-tags">
+        ${group.names.map(n => `<span>${n}</span>`).join("")}
       </div>
     </div>
   `;
@@ -526,10 +498,21 @@ function renderDonors(data) {
     <div class="eyebrow" data-rv>${bi(data.eyebrow)}</div>
     <h2 data-rv>${bi(data.heading)}</h2>
     <p class="muted" data-rv>${bi(data.intro)}</p>
-    <div class="donor-names" data-rv>
-      ${data.names.map(n => `<span>${n}</span>`).join("")}
+    <div class="donors-layout">
+      ${data.photo ? `
+        <div class="donor-photo-frame" data-rv>
+          <div class="donor-photo">
+            <img src="images/${encodeURIComponent(data.photo.file)}" alt="Yakshagana performer">
+          </div>
+        </div>
+      ` : ""}
+      <div>
+        <div class="donor-names" data-rv>
+          ${data.names.map(n => `<span>${n}</span>`).join("")}
+        </div>
+        <p class="donors-cta"><a class="card-link" href="#donate">${bi(data.cta)} →</a></p>
+      </div>
     </div>
-    <p class="donors-cta"><a class="card-link" href="#donate">${bi(data.cta)} →</a></p>
   `;
 }
 
@@ -561,28 +544,6 @@ function renderContact(data) {
   `;
 }
 
-// ---------- Scroll reveal ----------
-
-function initReveal() {
-  const els = Array.from(document.querySelectorAll("[data-rv]"));
-  if (!("IntersectionObserver" in window)) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.style.animation = "yvRise 0.75s cubic-bezier(0.16,0.84,0.28,1) both";
-      io.unobserve(entry.target);
-    });
-  }, { rootMargin: "0px 0px -12% 0px", threshold: 0.06 });
-  els.forEach((el, i) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.92) {
-      el.style.animation = `yvRise 0.8s cubic-bezier(0.16,0.84,0.28,1) ${Math.min(i * 0.09, 0.5)}s both`;
-    } else {
-      io.observe(el);
-    }
-  });
-}
-
 // ---------- Boot ----------
 
 async function boot() {
@@ -594,6 +555,8 @@ async function boot() {
   renderHome(home);
   renderAbout(about);
   renderProjects(projects);
+  renderNavProjectsDropdown(projects);
+  initNavDropdowns();
   renderApps(apps);
   renderAchievements(achievements);
   renderLeadership(leadership);

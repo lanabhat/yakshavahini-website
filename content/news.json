@@ -1,8 +1,8 @@
 {
-  "eyebrow": { "kn": "೦೬ — ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮ", "en": "06 — News & Events" },
+  "eyebrow": { "kn": "೦೬ - ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮ", "en": "06 - News & Events" },
   "heading": { "kn": "ಇತ್ತೀಚಿನ ಸುದ್ದಿ", "en": "Latest News" },
   "blogger": {
-    "_comment": "Aggregates posts from the org's main blog and its six project blogs. IMPORTANT: yakshavahini.com's main blog will move from the apex domain to a subdomain (see HOSTING.md) once the apex is repointed at the new static site — update the 'main' source's feedUrl to that new subdomain at that time, or this source will stop resolving.",
+    "_comment": "Aggregates posts from the org's main blog and its six project blogs. IMPORTANT: yakshavahini.com's main blog will move from the apex domain to a subdomain (see HOSTING.md) once the apex is repointed at the new static site - update the 'main' source's feedUrl to that new subdomain at that time, or this source will stop resolving.",
     "maxPerSource": 4,
     "maxTotal": 9,
     "sources": [
@@ -24,8 +24,8 @@
       "tag": { "kn": "ಕಾರ್ಯಕ್ರಮ ಸರಣಿ", "en": "Program Series" },
       "title": { "kn": "ಯಕ್ಷಸಾಹಿತ್ಯಸಾಂಗತ್ಯ", "en": "Yaksha Sahitya Sangatya" },
       "description": {
-        "kn": "ನಾಡಿನ ಪ್ರಮುಖ ಸಾಹಿತಿಗಳಿಂದ ಯಕ್ಷಗಾನ ಪ್ರಸಂಗಗಳ ಸಾಹಿತ್ಯಿಕ ವಿಶ್ಲೇಷಣೆ — ಸುಮಾರು 25 ಕಂತುಗಳು, 3 ಲಕ್ಷಕ್ಕೂ ಅಧಿಕ ವೀಕ್ಷಣೆಗಳು.",
-        "en": "Literary analysis of Yakshagana prasangas by leading Kannada writers — around 25 episodes, 300,000+ views."
+        "kn": "ನಾಡಿನ ಪ್ರಮುಖ ಸಾಹಿತಿಗಳಿಂದ ಯಕ್ಷಗಾನ ಪ್ರಸಂಗಗಳ ಸಾಹಿತ್ಯಿಕ ವಿಶ್ಲೇಷಣೆ - ಸುಮಾರು 25 ಕಂತುಗಳು.",
+        "en": "Literary analysis of Yakshagana prasangas by leading Kannada writers - around 25 episodes."
       }
     },
     {

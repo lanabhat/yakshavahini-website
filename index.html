@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ಯಕ್ಷವಾಹಿನಿ — Yakshavahini</title>
-<meta name="description" content="Yakshavahini — a volunteer-driven cultural organization preserving, digitizing and freely sharing Yakshagana literature and heritage.">
+<title>ಯಕ್ಷವಾಹಿನಿ - Yakshavahini</title>
+<meta name="description" content="Yakshavahini - a volunteer-driven cultural organization preserving, digitizing and freely sharing Yakshagana literature and heritage.">
 <link rel="icon" href="images/yakshavahini-gold.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,10 @@
     </a>
     <nav class="site-nav">
       <a href="#about" lang="kn">ಪರಿಚಯ</a><a href="#about" lang="en">About</a>
-      <a href="#projects" lang="kn">ಯೋಜನೆಗಳು</a><a href="#projects" lang="en">Projects</a>
+      <div class="nav-dropdown">
+        <a href="#projects" class="nav-dropdown-trigger" lang="kn">ಯೋಜನೆಗಳು ▾</a><a href="#projects" class="nav-dropdown-trigger" lang="en">Projects ▾</a>
+        <div class="nav-dropdown-menu" id="nav-projects-menu"></div>
+      </div>
       <a href="#apps" lang="kn">ಆ್ಯಪ್‌ಗಳು</a><a href="#apps" lang="en">Apps</a>
       <a href="#achievements" lang="kn">ಸಾಧನೆ</a><a href="#achievements" lang="en">Achievements</a>
       <a href="#leadership" lang="kn">ನೇತೃತ್ವ</a><a href="#leadership" lang="en">Leadership</a>
@@ -50,12 +53,13 @@
   <section id="leadership" class="light"><div class="container" id="leadership-content"></div></section>
   <section id="news"><div class="container" id="news-content"></div></section>
   <section id="videos" class="light"><div class="container" id="videos-content"></div></section>
+  <section id="donate"><div class="container" id="donate-content"></div></section>
+  <section id="donors" class="light"><div class="container" id="donors-content"></div></section>
   <section id="volunteer"><div class="container" id="volunteer-content"></div></section>
-  <section id="donate" class="light"><div class="container" id="donate-content"></div></section>
-  <section id="donors"><div class="container" id="donors-content"></div></section>
   <section id="contact"><div class="container" id="contact-content"></div></section>
 </main>
 
+<script src="js/common.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

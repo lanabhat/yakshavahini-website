@@ -1,5 +1,5 @@
 {
-  "eyebrow": { "kn": "೦೫ — ನೇತೃತ್ವ", "en": "05 — Leadership" },
+  "eyebrow": { "kn": "೦೫ - ನೇತೃತ್ವ", "en": "05 - Leadership" },
   "heading": {
     "kn": "ಟ್ರಸ್ಟಿಗಳು, ಕಾರ್ಯನಿರ್ವಾಹಕ ಸಮಿತಿ ಮತ್ತು ಸಲಹಾ ಮಂಡಳಿ",
     "en": "Trustees, Executive Committee & Advisory Board"
@@ -8,21 +8,21 @@
     {
       "title": { "kn": "ಟ್ರಸ್ಟಿಗಳು", "en": "Trustees" },
       "members": [
-        { "name": "ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯ", "nameEn": "Dr. Anandarama Upadhya", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ · ಕಾರ್ಯಾಧ್ಯಕ್ಷ", "en": "Founder Trustee & Chairperson (Executive)" } },
-        { "name": "ನಟರಾಜ ಉಪಾಧ್ಯ", "nameEn": "Nataraja Upadhya", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ", "en": "Founder Trustee" } },
-        { "name": "ರವಿ ಮಡೋಡಿ", "nameEn": "Ravi Madodi", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ · ಖಜಾಂಚಿ", "en": "Founder Trustee & Treasurer" } },
-        { "name": "ಅಜಿತ್ ಕಾರಂತ", "nameEn": "Ajit Karanth", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Joint Secretary" } },
-        { "name": "ಸುಹಾಸ್ ಮರಾಠೆ", "nameEn": "Suhas Marathe", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Secretary" } },
-        { "name": "ಉಮೇಶ್ ಶಿರೂರು", "nameEn": "Umesh Sirooru", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Joint Secretary" } }
+        { "name": "ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯ", "nameEn": "Dr. Anandarama Upadhya", "photo": "Dr Upadhya.jpg", "photoPosition": "center top", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ · ಕಾರ್ಯಾಧ್ಯಕ್ಷ", "en": "Founder Trustee & Chairperson (Executive)" } },
+        { "name": "ನಟರಾಜ ಉಪಾಧ್ಯ", "nameEn": "Nataraja Upadhya", "photo": "nataraj upadhya.jpg", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ", "en": "Founder Trustee" } },
+        { "name": "ರವಿ ಮಡೋಡಿ", "nameEn": "Ravi Madodi", "photo": "ravi madodi.jpg", "role": { "kn": "ಸಂಸ್ಥಾಪಕ ಟ್ರಸ್ಟಿ · ಖಜಾಂಚಿ", "en": "Founder Trustee & Treasurer" } },
+        { "name": "ಅಜಿತ್ ಕಾರಂತ", "nameEn": "Ajit Karanth", "photo": "ajith karantha.jpg", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Joint Secretary" } },
+        { "name": "ಸುಹಾಸ್ ಮರಾಠೆ", "nameEn": "Suhas Marathe", "photo": "suhas marathe.jpg", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Secretary" } },
+        { "name": "ಉಮೇಶ್ ಶಿರೂರು", "nameEn": "Umesh Sirooru", "photo": "umesh shiroor.jpg", "role": { "kn": "ಟ್ರಸ್ಟಿ · ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ", "en": "Trustee & Joint Secretary" } }
       ]
     },
     {
       "title": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ ಮಂಡಳಿ", "en": "Honorary Board of Directors" },
       "members": [
-        { "name": "ಪ್ರೊ. ಎಂ. ಲಕ್ಷ್ಮೀನಾರಾಯಣ ಸಾಮಗ", "nameEn": "Prof. M. Lakshminarayana Samaga", "role": { "kn": "ಗೌರವಾಧ್ಯಕ್ಷ", "en": "Honorary Chairperson" } },
-        { "name": "ಶ್ರೀಧರ ಡಿ. ಎಸ್.", "nameEn": "Sridhara D. S.", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } },
-        { "name": "ಗಿಂಡೀಮನೆ ಮೃತ್ಯುಂಜಯ", "nameEn": "Gindimane Mrutyunjaya", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } },
-        { "name": "ಅನಂತಪದ್ಮನಾಭ ಪಾಠಕ್", "nameEn": "Anantapadmanabha Pathak", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } }
+        { "name": "ಪ್ರೊ. ಎಂ. ಲಕ್ಷ್ಮೀನಾರಾಯಣ ಸಾಮಗ", "nameEn": "Prof. M. Lakshminarayana Samaga", "photo": "M L Samaga.jpg", "role": { "kn": "ಗೌರವಾಧ್ಯಕ್ಷ", "en": "Honorary Chairperson" } },
+        { "name": "ಶ್ರೀಧರ ಡಿ. ಎಸ್.", "nameEn": "Sridhara D. S.", "photo": "shreedhara ds.jpg", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } },
+        { "name": "ಗಿಂಡೀಮನೆ ಮೃತ್ಯುಂಜಯ", "nameEn": "Gindimane Mrutyunjaya", "photo": "Gindimane Mruthyunjaya.jpg", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } },
+        { "name": "ಅನಂತಪದ್ಮನಾಭ ಪಾಠಕ್", "nameEn": "Anantapadmanabha Pathak", "photo": "A P Pathak.jpg", "role": { "kn": "ಗೌರವ ನಿರ್ದೇಶಕ", "en": "Honorary Director" } }
       ]
     },
     {
@@ -52,7 +52,7 @@
     ]
   },
   "volunteersNote": {
-    "kn": "ಆಶ್ವಿನಿ ಹೊದಲ, ಅಶೋಕ ಮುಂಗಳಿಮನೆ, ಡಾ. ಶ್ರೀಕೃಷ್ಣ ಭಟ್ ಸುಣ್ಣಂಗುಳಿ, ವಿದ್ಯಾ ಹೆಗಡೆ ಕವಿತಾಸ್ಫೂರ್ತಿ ಸೇರಿದಂತೆ ಅನೇಕ ಸ್ವಯಂಸೇವಕರ ನಿಸ್ವಾರ್ಥ ಸೇವೆಗೆ ಸಂಸ್ಥೆಯು ಆಭಾರಿಯಾಗಿದೆ.",
-    "en": "Yakshavahini is deeply grateful to the many volunteers — including Ashwini Hodala, Ashok Mungalimane, Dr. Shrikrishna Bhat Sunnanguli, Vidya Hegde Kavitasphoorti and numerous others — whose selfless service powers every project."
+    "kn": "ಸಂಸ್ಥೆಯ ಯೋಜನೆಗಳ ಯಶಸ್ಸಿನ ಜೀವಾಳವೇ ಸ್ವಯಂಸೇವೆ - ಅದಕ್ಕಾಗಿ ದುಡಿದಿರುವ ಎಲ್ಲಾ ಸ್ವಯಂಸೇವಕರ ಪಟ್ಟಿಯನ್ನು ಸ್ವಯಂಸೇವೆ ವಿಭಾಗದಲ್ಲಿ ಕಾಣಬಹುದು.",
+    "en": "Volunteering is the lifeblood of every project's success - see the full list of volunteers in the Volunteer section below."
   }
 }

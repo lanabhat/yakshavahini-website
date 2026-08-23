@@ -1,5 +1,8 @@
 {
-  "eyebrow": { "kn": "೦೩ — ಯೋಜನೆಗಳು", "en": "03 — Projects" },
+  "eyebrow": {
+    "kn": "೦೩ - ಯೋಜನೆಗಳು",
+    "en": "03 - Projects"
+  },
   "heading": {
     "kn": "ಎಂಟು ಡಿಜಿಟಲ್ ಕೋಶಗಳು",
     "en": "Eight Digital Koshas"
@@ -11,89 +14,145 @@
   "items": [
     {
       "code": "01 / KOSHA",
-      "title": { "kn": "ಯಕ್ಷಪ್ರಸಂಗಪಟ್ಟಿ", "en": "Yaksha Prasangapatti" },
+      "title": {
+        "kn": "ಯಕ್ಷಪ್ರಸಂಗಪಟ್ಟಿ",
+        "en": "Yaksha Prasangapatti"
+      },
       "description": {
         "kn": "ಯಕ್ಷಗಾನ ಚರಿತ್ರೆಯ ೫,೦೦೦ಕ್ಕೂ ಮಿಕ್ಕಿದ ಪ್ರಸಂಗಗಳ ಪಟ್ಟಿ, ಪ್ರಸಂಗಕೋಶ ಹಾಗೂ ಪ್ರತಿಸಂಗ್ರಹದ ಕೊಂಡಿಗಳೊಂದಿಗೆ.",
         "en": "A list of 5,000+ prasangas from Yakshagana history, cross-linked to the Prasangakosha and Prasanga Prati Sangraha where available."
       },
-      "stat": { "kn": "5000+ ಪ್ರಸಂಗಗಳು", "en": "5,000+ prasangas" },
+      "stat": {
+        "kn": "5000+ ಪ್ರಸಂಗಗಳು",
+        "en": "5,000+ prasangas"
+      },
       "coordinator": "ನಟರಾಜ ಉಪಾಧ್ಯ, ಆಶ್ವಿನಿ ಹೊದಲ (ಹಿಂದೆ) · ಉಮೇಶ ಶಿರೂರು (ಪ್ರಸ್ತುತ)",
-      "blogUrl": "https://yakshaprasangayaadi.yakshavahini.com/"
+      "blogUrl": "https://yakshaprasangayaadi.yakshavahini.com/",
+      "slug": "prasangapatti"
     },
     {
       "code": "02 / KOSHA",
-      "title": { "kn": "ಯಕ್ಷಪ್ರಸಂಗಕೋಶ", "en": "Yaksha Prasangakosha" },
+      "title": {
+        "kn": "ಯಕ್ಷಪ್ರಸಂಗಕೋಶ",
+        "en": "Yaksha Prasangakosha"
+      },
       "description": {
         "kn": "ಮುದ್ರಿತ/ಹಸ್ತಪ್ರತಿಗಳನ್ನು ಟೈಪಿಸಿ, ಪರಿಷ್ಕರಿಸಿ, ಪಿಡಿಎಫ್ ರೂಪದಲ್ಲಿ ಅಂತರ್ಜಾಲದಲ್ಲಿ ಉಚಿತ ಪ್ರಕಟಣೆ.",
         "en": "Printed and handwritten prasanga texts typed, corrected and published online as free PDFs."
       },
-      "stat": { "kn": "270+ ಪ್ರಸಂಗಗಳು ಪ್ರಕಟ (ಡಿಸೆಂಬರ್ 2025)", "en": "270+ prasangas published (Dec 2025)" },
+      "stat": {
+        "kn": "270+ ಪ್ರಸಂಗಗಳು ಪ್ರಕಟ (ಡಿಸೆಂಬರ್ 2025)",
+        "en": "270+ prasangas published (Dec 2025)"
+      },
       "coordinator": "ರವಿ ಮಡೋಡಿ (ಸಂಚಾಲಕರು), ಗಿಂಡಿಮನೆ ಮೃತ್ಯುಂಜಯ (ಪರಿಷ್ಕರಣೆ), ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯ (ಕಥಾಸಾರಾಂಶ)",
-      "blogUrl": "https://yakshaprasangakosha.yakshavahini.com/"
+      "blogUrl": "https://yakshaprasangakosha.yakshavahini.com/",
+      "slug": "prasangakosha"
     },
     {
       "code": "03 / SCANS",
-      "title": { "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ", "en": "Prasanga Prati Sangraha" },
+      "title": {
+        "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ",
+        "en": "Prasanga Prati Sangraha"
+      },
       "description": {
         "kn": "ಜೀರ್ಣಾವಸ್ಥೆ ತಲುಪುತ್ತಿರುವ ಪ್ರಸಂಗ ಪ್ರತಿಗಳನ್ನು ಸಂಗ್ರಹಿಸಿ, ಸ್ಕ್ಯಾನ್ ಮಾಡಿ, ಮೊಬೈಲ್ ಆ್ಯಪ್ ಹಾಗೂ ವೆಬ್‌ಸೈಟ್ ಮೂಲಕ ಉಚಿತವಾಗಿ ಲಭ್ಯ.",
         "en": "Fragile, ageing prasanga copies collected, scanned and made freely available via a mobile app and website."
       },
-      "stat": { "kn": "1861+ ಪ್ರತಿಗಳ ಸಂಗ್ರಹ", "en": "1,861+ copies collected" },
+      "stat": {
+        "kn": "1861+ ಪ್ರತಿಗಳ ಸಂಗ್ರಹ",
+        "en": "1,861+ copies collected"
+      },
       "coordinator": "ಲಕ್ಷ್ಮೀನಾರಾಯಣ ಭಟ್ (ಲ. ನಾ. ಭಟ್) · ಪ್ರಾರಂಭಿಕ: ನಟರಾಜ ಉಪಾಧ್ಯ, ಆಶ್ವಿನಿ ಹೊದಲ",
-      "blogUrl": "https://prasangaprathisangraha.yakshavahini.com/"
+      "blogUrl": "https://prasangaprathisangraha.yakshavahini.com/",
+      "slug": "pratisangraha"
     },
     {
       "code": "04 / MUSIC",
-      "title": { "kn": "ಯಕ್ಷಮಟ್ಟುಕೋಶ", "en": "Yaksha Mattukosha" },
+      "title": {
+        "kn": "ಯಕ್ಷಮಟ್ಟುಕೋಶ",
+        "en": "Yaksha Mattukosha"
+      },
       "description": {
         "kn": "ಯಕ್ಷಗಾನ ಛಂದೋಬಂಧಗಳ (ಮಟ್ಟುಗಳ) ಲಕ್ಷಣ, ರಾಗ, ಬಳಕೆಯ ಸಂದರ್ಭ ಹಾಗೂ ಯುವ ಭಾಗವತರಿಂದ ಹಾಡಿಸಿದ ದೃಷ್ಟಾಂತಗಳ ದಾಖಲೀಕರಣ.",
         "en": "Documenting the metre, ragas, usage context and sung examples (by young bhagavataru) of Yakshagana's musical/verse forms (mattus)."
       },
-      "stat": { "kn": "100+ ಮಟ್ಟುಗಳು ಲೋಕಾರ್ಪಣೆ", "en": "100+ mattus published" },
+      "stat": {
+        "kn": "100+ ಮಟ್ಟುಗಳು ಲೋಕಾರ್ಪಣೆ",
+        "en": "100+ mattus published"
+      },
       "coordinator": "ಅಜಿತ್ ಕಾರಂತ (ಸಂಚಾಲಕರು), ಆಶ್ವಿನಿ ಹೊದಲ · ಮಾರ್ಗದರ್ಶನ: ಶ್ರೀಧರ ಡಿ. ಎಸ್., ಗಿಂಡೀಮನೆ ಮೃತ್ಯುಂಜಯ",
-      "blogUrl": "https://yakshamattukosha.yakshavahini.com/"
+      "blogUrl": "https://yakshamattukosha.yakshavahini.com/",
+      "slug": "mattukosha"
     },
     {
       "code": "05 / DIRECTORY",
-      "title": { "kn": "ಯಕ್ಷಸಂಘಟನಾಕೋಶ", "en": "Yaksha Sanghatanakosha" },
-      "description": {
-        "kn": "ಮೇಳಗಳು, ಶಾಲೆಗಳು, ಹವ್ಯಾಸೀ ಸಂಸ್ಥೆಗಳು, ತಾಳಮದ್ದಳೆ ತಂಡಗಳು, ಪ್ರಕಾಶನ ಸಂಸ್ಥೆಗಳು, ಪ್ರತಿಷ್ಠಾನಗಳು — ಎಲ್ಲಾ ಬಗೆಯ ಯಕ್ಷಗಾನ ಸಂಘಟನೆಗಳ ಕಿರುಪರಿಚಯ ಹಾಗೂ ಸಂಪರ್ಕ ಮಾಹಿತಿ.",
-        "en": "A directory of Yakshagana organizations of every kind — troupes, schools, hobbyist groups, talamaddale teams, publishers and foundations — with brief profiles and contact details."
+      "title": {
+        "kn": "ಯಕ್ಷಸಂಘಟನಾಕೋಶ",
+        "en": "Yaksha Sanghatanakosha"
       },
-      "stat": { "kn": "ಮೊದಲ ಆವೃತ್ತಿ ಸಿದ್ಧತೆಯಲ್ಲಿ", "en": "First edition in preparation" },
+      "description": {
+        "kn": "ಮೇಳಗಳು, ಶಾಲೆಗಳು, ಹವ್ಯಾಸೀ ಸಂಸ್ಥೆಗಳು, ತಾಳಮದ್ದಳೆ ತಂಡಗಳು, ಪ್ರಕಾಶನ ಸಂಸ್ಥೆಗಳು, ಪ್ರತಿಷ್ಠಾನಗಳು - ಎಲ್ಲಾ ಬಗೆಯ ಯಕ್ಷಗಾನ ಸಂಘಟನೆಗಳ ಕಿರುಪರಿಚಯ ಹಾಗೂ ಸಂಪರ್ಕ ಮಾಹಿತಿ.",
+        "en": "A directory of Yakshagana organizations of every kind - troupes, schools, hobbyist groups, talamaddale teams, publishers and foundations - with brief profiles and contact details."
+      },
+      "stat": {
+        "kn": "ಮೊದಲ ಆವೃತ್ತಿ ಸಿದ್ಧತೆಯಲ್ಲಿ",
+        "en": "First edition in preparation"
+      },
       "coordinator": "ಉಮೇಶ ಶಿರೂರು (ಸಂಚಾಲಕರು)",
-      "blogUrl": "https://yakshasanghatanakosha.yakshavahini.com/"
+      "blogUrl": "https://yakshasanghatanakosha.yakshavahini.com/",
+      "slug": "sanghatanakosha"
     },
     {
       "code": "06 / LIBRARY",
-      "title": { "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ", "en": "Yaksha Pustakakosha" },
+      "title": {
+        "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ",
+        "en": "Yaksha Pustakakosha"
+      },
       "description": {
         "kn": "ಪ್ರಸಂಗಗಳಲ್ಲದೇ ಇತರ ಯಕ್ಷಗಾನ ಪುಸ್ತಕಗಳ (ಸಂಶೋಧನೆ, ವಿಮರ್ಶೆ, ಆತ್ಮಚರಿತ್ರೆ) ಡಿಜಿಟಲೀಕರಣ, archive.org ದೊಂದಿಗೆ ಸಹಯೋಗ.",
-        "en": "Digitizing non-prasanga Yakshagana books — research, criticism, memoirs — in collaboration with archive.org's Kannada collection."
+        "en": "Digitizing non-prasanga Yakshagana books - research, criticism, memoirs - in collaboration with archive.org's Kannada collection."
       },
-      "stat": { "kn": "ನೂರಾರು ಪುಸ್ತಕಗಳು ಡಿಜಿಟಲ್", "en": "Hundreds of books digitized" },
+      "stat": {
+        "kn": "ನೂರಾರು ಪುಸ್ತಕಗಳು ಡಿಜಿಟಲ್",
+        "en": "Hundreds of books digitized"
+      },
       "coordinator": "ಉಮೇಶ ಶಿರೂರು (ಸಂಚಾಲಕರು) · ಸಹಯೋಗ: ಸಂಚಿ ಪ್ರತಿಷ್ಠಾನ, ಓಂ ಶಿವಪ್ರಕಾಶ",
-      "blogUrl": "https://yakshapusthakayaadi.yakshavahini.com/"
+      "blogUrl": "https://yakshapusthakayaadi.yakshavahini.com/",
+      "slug": "pustakakosha"
     },
     {
       "code": "07 / CENTRE",
-      "title": { "kn": "ಆನ್‌ಲೈನ್ ಯಕ್ಷಗಾನ ಅಧ್ಯಯನ ಕೇಂದ್ರ", "en": "Online Yakshagana Study Centre" },
+      "title": {
+        "kn": "ಆನ್‌ಲೈನ್ ಯಕ್ಷಗಾನ ಅಧ್ಯಯನ ಕೇಂದ್ರ",
+        "en": "Online Yakshagana Study Centre"
+      },
       "description": {
-        "kn": "ಯಕ್ಷಗಾನಕ್ಕೆ ಸಂಬಂಧಿತ ಅಧ್ಯಯನ, ಚರ್ಚೆ ಹಾಗೂ ಸಂವಾದಗಳ ಲೈವ್ ಪ್ರಸಾರ ಹಾಗೂ ದಾಖಲೀಕರಣ — ಯಕ್ಷಸಾಹಿತ್ಯಸಾಂಗತ್ಯ, ಯಕ್ಷಕವಿ ನಮನ, ಯಕ್ಷಶೋಧಸಾರ ಸರಣಿಗಳ ಮೂಲಕ.",
+        "kn": "ಯಕ್ಷಗಾನಕ್ಕೆ ಸಂಬಂಧಿತ ಅಧ್ಯಯನ, ಚರ್ಚೆ ಹಾಗೂ ಸಂವಾದಗಳ ಲೈವ್ ಪ್ರಸಾರ ಹಾಗೂ ದಾಖಲೀಕರಣ - ಯಕ್ಷಸಾಹಿತ್ಯಸಾಂಗತ್ಯ, ಯಕ್ಷಕವಿ ನಮನ, ಯಕ್ಷಶೋಧಸಾರ ಸರಣಿಗಳ ಮೂಲಕ.",
         "en": "Live-streaming and archiving Yakshagana study sessions and discussions, through series such as Yaksha Sahitya Sangatya, Yaksha Kavi Namana and Yaksha Shodhasara."
       },
-      "stat": { "kn": "3+ ಲಕ್ಷ ವೀಕ್ಷಣೆಗಳು (ಯಕ್ಷಸಾಹಿತ್ಯಸಾಂಗತ್ಯ)", "en": "300,000+ views (Yaksha Sahitya Sangatya)" },
-      "coordinator": "ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯ (ನೇತೃತ್ವ), ಪರಿಕಲ್ಪನೆ: ರವಿ ಮಡೋಡಿ"
+      "stat": {
+        "kn": "ನಿರಂತರ ಕಾರ್ಯಕ್ರಮ ಸರಣಿಗಳು",
+        "en": "Ongoing program series"
+      },
+      "coordinator": "ಡಾ. ಆನಂದರಾಮ ಉಪಾಧ್ಯ (ನೇತೃತ್ವ), ಪರಿಕಲ್ಪನೆ: ರವಿ ಮಡೋಡಿ",
+      "slug": "adhyayanakendra"
     },
     {
       "code": "08 / COMMUNITY",
-      "title": { "kn": "ಸುಹೃತ್ ಸಂವಾದ ಹಾಗೂ ತಾಳಮದ್ದಳೆ", "en": "Suhrut Samvada & Talamaddale" },
+      "title": {
+        "kn": "ಸುಹೃತ್ ಸಂವಾದ ಹಾಗೂ ತಾಳಮದ್ದಳೆ",
+        "en": "Suhrut Samvada & Talamaddale"
+      },
       "description": {
         "kn": "ಅರ್ಥ ಹೇಳುವ ಕಲೆಯನ್ನು ಹವ್ಯಾಸಿಗಳಿಗೆ, ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ತೋರಿಸುವ ಸಂವಾದ ಕಾರ್ಯಕ್ರಮಗಳು ಹಾಗೂ ಸಹಯೋಗಿ ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ನಡೆಸುವ ತಾಳಮದ್ದಳೆಗಳು.",
         "en": "Conversation programs that teach the art of arthagarike (extempore dialogue) to hobbyists and students, plus talamaddale performances run jointly with partner organizations."
       },
-      "stat": { "kn": "3 ಸಂವಾದ · 3 ತಾಳಮದ್ದಳೆ ಕಾರ್ಯಕ್ರಮ", "en": "3 dialogues · 3 talamaddale programs" },
-      "coordinator": "ಅಜಿತ್ ಕಾರಂತ (ಪರಿಕಲ್ಪನೆ)"
+      "stat": {
+        "kn": "3 ಸಂವಾದ · 3 ತಾಳಮದ್ದಳೆ ಕಾರ್ಯಕ್ರಮ",
+        "en": "3 dialogues · 3 talamaddale programs"
+      },
+      "coordinator": "ಅಜಿತ್ ಕಾರಂತ (ಪರಿಕಲ್ಪನೆ)",
+      "slug": "suhrutsamvada"
     }
   ]
 }

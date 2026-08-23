@@ -1,17 +1,17 @@
 {
-  "eyebrow": { "kn": "೦೮ — ದೇಣಿಗೆ", "en": "08 — Donate" },
+  "eyebrow": { "kn": "೦೮ - ದೇಣಿಗೆ", "en": "08 - Donate" },
   "heading": {
     "kn": "ನಿಮ್ಮ ದೇಣಿಗೆ ಎಲ್ಲಿ ಬಳಕೆಯಾಗುತ್ತದೆ",
     "en": "Where Your Donation Goes"
   },
   "body": {
-    "kn": "ಸ್ಕ್ಯಾನರ್ ಮತ್ತು ಸಂಗ್ರಹ ಸಾಧನಗಳು, ಸರ್ವರ್ ಹಾಗೂ ಡೊಮೇನ್ ಶುಲ್ಕ, ಹಸ್ತಪ್ರತಿ ಸಂರಕ್ಷಣೆ, ಕ್ಷೇತ್ರಕಾರ್ಯ ಮತ್ತು ಸಂದರ್ಶನ ದಾಖಲೀಕರಣ — ಇವಕ್ಕೆ ನಿಮ್ಮ ಸಹಾಯ ನೇರವಾಗಿ ಬಳಕೆಯಾಗುತ್ತದೆ.",
-    "en": "Scanners and storage devices, server and domain costs, manuscript preservation, and field-visit/interview documentation — your contribution goes directly toward these."
+    "kn": "ಸ್ಕ್ಯಾನರ್ ಮತ್ತು ಸಂಗ್ರಹ ಸಾಧನಗಳು, ಸರ್ವರ್ ಹಾಗೂ ಡೊಮೇನ್ ಶುಲ್ಕ, ಹಸ್ತಪ್ರತಿ ಸಂರಕ್ಷಣೆ, ಕ್ಷೇತ್ರಕಾರ್ಯ ಮತ್ತು ಸಂದರ್ಶನ ದಾಖಲೀಕರಣ - ಇವಕ್ಕೆ ನಿಮ್ಮ ಸಹಾಯ ನೇರವಾಗಿ ಬಳಕೆಯಾಗುತ್ತದೆ.",
+    "en": "Scanners and storage devices, server and domain costs, manuscript preservation, and field-visit/interview documentation - your contribution goes directly toward these."
   },
   "footnote": { "kn": "ಎಲ್ಲಾ ಸಂಗ್ರಹಗಳು ಸದಾ ಉಚಿತ.", "en": "All archives remain free to access. Always." },
   "bank": {
     "bankLabel": { "kn": "ಬ್ಯಾಂಕ್", "en": "Bank" },
-    "bankName": "Karnataka Bank, Banashankari III Stage Branch, Bengaluru — PIN 560085",
+    "bankName": "Karnataka Bank, Banashankari III Stage Branch, Bengaluru - PIN 560085",
     "accountNameLabel": { "kn": "ಖಾತೆಯ ಹೆಸರು", "en": "Account Name" },
     "accountName": "Yakshavahini",
     "accountNumberLabel": { "kn": "ಖಾತೆ ಸಂಖ್ಯೆ", "en": "Account Number" },

@@ -1,5 +1,5 @@
 {
-  "eyebrow": { "kn": "೦೯ — ಸಂಪರ್ಕ", "en": "09 — Contact" },
+  "eyebrow": { "kn": "೦೯ - ಸಂಪರ್ಕ", "en": "09 - Contact" },
   "heading": { "kn": "ಬರೆಯಿರಿ, ಮಾತನಾಡಿ", "en": "Write to Us, Talk to Us" },
   "email": { "label": { "kn": "ಇಮೇಲ್", "en": "Email" }, "value": "yakshavahini@gmail.com" },
   "website": { "label": { "kn": "ವೆಬ್‌ಸೈಟ್", "en": "Website" }, "value": "yakshavahini.com" },
@@ -18,7 +18,7 @@
     { "label": "WhatsApp group", "icon": "whatsapp", "href": "https://chat.whatsapp.com/BayFDiyWfgUL1UjkgpXnc2" }
   ],
   "copyright": {
-    "kn": "© {year} ಯಕ್ಷವಾಹಿನಿ (ರಿ) — ಮುಂದಿನ ಪೀಳಿಗೆಗಾಗಿ ದಾಖಲೀಕರಣ ಮತ್ತು ಸಂರಕ್ಷಣೆ.",
-    "en": "© {year} Yakshavahini (Regd.) — Documentation and preservation for the next generation."
+    "kn": "© {year} ಯಕ್ಷವಾಹಿನಿ (ರಿ) - ಮುಂದಿನ ಪೀಳಿಗೆಗಾಗಿ ದಾಖಲೀಕರಣ ಮತ್ತು ಸಂರಕ್ಷಣೆ.",
+    "en": "© {year} Yakshavahini (Regd.) - Documentation and preservation for the next generation."
   }
 }

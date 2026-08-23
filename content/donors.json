@@ -1,9 +1,12 @@
 {
-  "eyebrow": { "kn": "೦೮.೧ — ದೇಣಿಗೆದಾರರು", "en": "08.1 — Donors" },
+  "eyebrow": { "kn": "೦೮.೧ - ದೇಣಿಗೆದಾರರು", "en": "08.1 - Donors" },
   "heading": { "kn": "ಕೃತಜ್ಞತೆಯಿಂದ ನೆನೆಯುತ್ತಿದ್ದೇವೆ", "en": "With Gratitude" },
   "intro": {
     "kn": "ಯಕ್ಷವಾಹಿನಿಯ ಯೋಜನೆಗಳ ವೆಚ್ಚವನ್ನು ಭರಿಸಲು ಅನೇಕ ಮಹನೀಯರು ಧನಸಹಾಯದಿಂದ, ಸಂಪನ್ಮೂಲ ವ್ಯಕ್ತಿಗಳು ಗೌರವಧನ ನಿರಾಕರಿಸುವ ಮೂಲಕ, ಹಾಗೂ ಗ್ರಂಥಾಲಯಕ್ಕೆ ಅಮೂಲ್ಯ ಪುಸ್ತಕಗಳ ದಾನದ ಮೂಲಕ ಸಹಕರಿಸಿದ್ದಾರೆ.",
     "en": "Many contributed to Yakshavahini's projects through direct donations, by waiving honoraria as resource persons, or by donating valuable books to the library."
+  },
+  "photo": {
+    "file": "badagu.jpg"
   },
   "names": [
     "ಸಿ. ಗಿರಿಧರ ಉಪಾಧ್ಯ (ಸಿಂಗಾಪುರ)", "ಅಶೋಕ ಶೆಟ್ಟಿ ಕೊಡ್ಲಾಡಿ", "ಪ್ರೊ. ಪ್ರಕಾಶ ಹಂದೆ (ಸಿಂಗಾಪುರ)",

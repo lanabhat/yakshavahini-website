@@ -1,7 +1,7 @@
 {
   "badge": {
-    "kn": "ಸ್ಥಾಪನೆ ೨೦೧೬ · ನೋಂದಾಯಿತ ಟ್ರಸ್ಟ್ ೨೦೧೭",
-    "en": "Est. 2016 · Registered Trust 2017"
+    "kn": "ಸ್ಥಾಪನೆ ೨೦೧೬",
+    "en": "Est. 2016"
   },
   "title": {
     "kn": "ಯಕ್ಷವಾಹಿನಿ ಪ್ರತಿಷ್ಠಾನ (ರಿ), ಬೆಂಗಳೂರು",
@@ -12,8 +12,8 @@
     "en": "A volunteer-driven cultural organization dedicated to preserving, digitizing and freely sharing Yakshagana literature, manuscripts, projects and heritage."
   },
   "lede": {
-    "kn": "ತೆಂಕುತಿಟ್ಟು, ಬಡಗುತಿಟ್ಟು ಹಾಗೂ ಎಲ್ಲಾ ತಿಟ್ಟುಗಳ ಪರಂಪರೆ — ಮುಂದಿನ ಪೀಳಿಗೆಗಾಗಿ, ಸ್ವಯಂಸೇವೆಯ ಬಲದಲ್ಲಿ ದಾಖಲಾಗುತ್ತಿದೆ.",
-    "en": "The heritage of every Yakshagana tradition — Tenkutittu, Badagutittu and beyond — being documented for the next generation, powered entirely by volunteers."
+    "kn": "ತೆಂಕುತಿಟ್ಟು, ಬಡಗುತಿಟ್ಟು ಹಾಗೂ ಎಲ್ಲಾ ತಿಟ್ಟುಗಳ ಪರಂಪರೆ - ಮುಂದಿನ ಪೀಳಿಗೆಗಾಗಿ, ಸ್ವಯಂಸೇವೆಯ ಬಲದಲ್ಲಿ ದಾಖಲಾಗುತ್ತಿದೆ.",
+    "en": "The heritage of every Yakshagana tradition - Tenkutittu, Badagutittu and beyond - being documented for the next generation, powered entirely by volunteers."
   },
   "cta": {
     "primary": { "kn": "ಯೋಜನೆಗಳನ್ನು ನೋಡಿ", "en": "See Our Projects" },

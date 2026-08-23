@@ -86,6 +86,25 @@ a { color: inherit; text-decoration: none; }
 .site-nav a { color: var(--text-on-dark-muted); transition: color 0.15s; }
 .site-nav a:hover { color: var(--text-on-dark); }
 
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger { cursor: pointer; background: none; border: none; font: inherit; padding: 0; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute; top: 100%; left: 0; margin-top: 14px;
+  min-width: 240px; max-height: 60vh; overflow-y: auto;
+  background: #0c1220; border: 1px solid var(--border-dark); border-radius: 8px;
+  padding: 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.4); z-index: 50;
+}
+.nav-dropdown-menu a {
+  display: block; padding: 8px 10px; border-radius: 6px;
+  font-size: 0.88rem; color: var(--text-on-dark-muted);
+}
+.nav-dropdown-menu a:hover { background: rgba(226,178,60,0.1); color: var(--gold); }
+.nav-dropdown.open .nav-dropdown-menu { display: block; }
+@media (min-width: 861px) {
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+}
+
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
 .lang-toggle {
@@ -282,7 +301,7 @@ h3 { font-size: 1.25rem; }
 .about-grid p { margin: 0 0 20px; line-height: 1.9; text-align: justify; text-justify: inter-word; }
 .about-photo { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border-light); margin-top: 20px; }
 .about-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
-.stat-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; margin-top: 28px; }
 .stat-card {
   background: #fff;
   border: 1px solid var(--border-light);
@@ -331,6 +350,8 @@ h3 { font-size: 1.25rem; }
 .leader-group h3 { font-size: 1.05rem; color: var(--pink); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 18px; }
 .leader-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
 .leader-card { background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius); padding: 18px; }
+.leader-photo { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; margin-bottom: 12px; border: 2px solid var(--gold); }
+.leader-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .leader-card .name { font-weight: 700; }
 .leader-card .role { color: var(--text-on-light-muted); font-size: 0.85rem; margin-top: 4px; }
 .advisory-names { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -344,6 +365,7 @@ h3 { font-size: 1.25rem; }
 .news-card h3 { margin-bottom: 8px; font-size: 1.05rem; }
 .news-card p { color: var(--text-on-dark-muted); margin: 0; font-size: 0.9rem; }
 .card-link { color: var(--gold); font-size: 0.85rem; font-weight: 700; display: inline-block; margin-top: 12px; }
+.project-card-links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .project-card .card-link { margin-top: 6px; }
 .news-note { color: var(--text-on-dark-muted); font-size: 0.85rem; margin-top: -8px; margin-bottom: 8px; }
 
@@ -371,6 +393,11 @@ h3 { font-size: 1.25rem; }
 .coordinator-list { margin-top: 24px; }
 .coordinator-list li { margin-bottom: 6px; color: var(--text-on-dark-muted); font-size: 0.9rem; }
 
+.name-group { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border-dark); }
+.name-group h3 { color: var(--gold); margin-bottom: 8px; }
+.name-tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.name-tags span { background: #10182b; border: 1px solid var(--border-dark); border-radius: 999px; padding: 6px 14px; font-size: 0.82rem; color: var(--text-on-dark-muted); }
+
 /* ---------- Donate ---------- */
 .donate-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
 .donate-card { background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius); padding: 24px; }
@@ -380,7 +407,17 @@ h3 { font-size: 1.25rem; }
 .footnote { color: var(--pink); font-family: monospace; margin-top: 20px; }
 
 /* ---------- Donors ---------- */
-.donor-names { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+.donors-layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: start; margin-top: 28px; }
+.donor-photo-frame {
+  background: #10182b; border: 1px solid var(--border-dark);
+  border-radius: var(--radius); padding: 14px;
+}
+.donor-photo {
+  position: relative; overflow: hidden;
+  border: 3px solid var(--gold); border-radius: 4px;
+}
+.donor-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+.donor-names { display: flex; flex-wrap: wrap; gap: 8px; }
 .donor-names span { background: #10182b; border: 1px solid var(--border-dark); border-radius: 999px; padding: 6px 14px; font-size: 0.82rem; color: var(--text-on-dark-muted); }
 .donors-cta { margin-top: 24px; }
 
@@ -397,10 +434,31 @@ h3 { font-size: 1.25rem; }
 .social-links a:hover { border-color: var(--gold); color: var(--gold); }
 .copyright { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-dark); color: var(--text-on-dark-muted); font-size: 0.85rem; }
 
+/* ---------- Project detail page ---------- */
+.back-link { display: inline-block; margin-bottom: 24px; }
+.project-detail-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 16px 0 20px; }
+.project-detail-meta .stat { color: var(--gold); font-weight: 700; }
+.project-detail-meta .coordinator { color: var(--text-on-dark-muted); font-size: 0.9rem; }
+.project-detail-body, .project-subsection { max-width: 760px; margin-top: 28px; }
+.project-detail-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.project-detail-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 16px; }
+.project-detail-body p, .project-subsection p {
+  margin: 0 0 20px; line-height: 1.9; text-align: justify; text-justify: inter-word;
+  color: var(--text-on-dark-muted);
+}
+.project-subsection { padding-top: 28px; border-top: 1px solid var(--border-dark); }
+.project-subsection h3 { color: var(--gold); margin-bottom: 14px; }
+.lang-note { margin-top: 40px; font-size: 0.82rem; color: var(--text-on-dark-muted); font-style: italic; max-width: 760px; }
+
+.site-footer { padding: 40px 0; border-top: 1px solid var(--border-dark); }
+.site-footer .brand img { height: 32px; margin-bottom: 12px; }
+.footer-copy { color: var(--text-on-dark-muted); font-size: 0.85rem; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .site-nav { display: none; }
-  .hero-grid, .about-grid, .volunteer-grid, .donate-grid { grid-template-columns: 1fr; }
+  .hero-grid, .about-grid, .volunteer-grid, .donate-grid, .donors-layout { grid-template-columns: 1fr; }
+  .donor-photo-frame { max-width: 320px; }
   .project-grid { grid-template-columns: 1fr; }
   .achv-stats { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }

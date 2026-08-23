@@ -1,5 +1,5 @@
 {
-  "eyebrow": { "kn": "೦೧ — ಪರಿಚಯ", "en": "01 — About" },
+  "eyebrow": { "kn": "೦೧ - ಪರಿಚಯ", "en": "01 - About" },
   "heading": {
     "kn": "ಒಂದು ಕಲೆಯ ನೆನಪನ್ನು ಶಾಶ್ವತಗೊಳಿಸುವ ಕೆಲಸ",
     "en": "Making the memory of an art form permanent"
@@ -7,7 +7,7 @@
   "body": [
     {
       "kn": "೨೦೧೬ನೇ ಇಸವಿಯಲ್ಲಿ ನೋಂದಣಿಗೊಂಡ ಯಕ್ಷವಾಹಿನಿ (ರಿ) ಸಂಸ್ಥೆಯು ಅಂತರ್ಜಾಲದಲ್ಲಿ ಯಕ್ಷಗಾನಕ್ಕೆ ಸಂಬಂಧಿಸಿ ದಾಖಲೀಕರಣ ಹಾಗೂ ಉಚಿತವಾದ ಬಿತ್ತರಕ್ಕಾಗಿ ಹುಟ್ಟಿಕೊಂಡಿತು. ನಂತರದಲ್ಲಿ ಆನ್‌ಲೈನ್ ವಿಚಾರಸಂಕಿರಣದ ಸುತ್ತ ದಾಖಲೀಕರಣ ಹಾಗೂ ಬಿತ್ತರದ ಎರಡನೇ ಧ್ಯೇಯೋದ್ದೇಶವನ್ನೂ ಸೇರಿಸಿಕೊಂಡಿತು.",
-      "en": "Registered in 2016, Yakshavahini (Regd.) was founded to document Yakshagana-related material online and broadcast it free of cost. It later added a second objective — documenting and broadcasting online seminars and discussions related to Yakshagana."
+      "en": "Registered in 2016, Yakshavahini (Regd.) was founded to document Yakshagana-related material online and broadcast it free of cost. It later added a second objective - documenting and broadcasting online seminars and discussions related to Yakshagana."
     },
     {
       "kn": "ಸ್ವಯಂಸೇವೆಯ ಬಲದಲ್ಲಿ ಯಾರೂ ಮಾಡದ ಕೆಲಸಗಳಿಗೆ ಒತ್ತು ಕೊಟ್ಟು ಯೋಜನೆಗಳ ಮೂಲಕ ದಾಖಲೀಕರಣ, ಹಾಲಿ ಯೋಜನೆಗಳ ಪರಿಧಿ ಹಾಗೂ ಆಳ ವಿಸ್ತಾರಗಳನ್ನು ಹೆಚ್ಚಿಸುವುದು ಇದರ ಈವರೆಗಿನ ಕಾರ್ಯವೈಖರಿಯ ಮುಖ್ಯ ತಂತ್ರಗಾರಿಕೆಯಾಗಿದೆ.",
@@ -16,7 +16,6 @@
   ],
   "stats": [
     { "value": "2016", "label": { "kn": "ಸ್ಥಾಪನೆ", "en": "Founded" } },
-    { "value": "2017", "label": { "kn": "ಟ್ರಸ್ಟ್ ನೋಂದಣೆ", "en": "Trust Registered" } },
     { "value": "8", "label": { "kn": "ಡಿಜಿಟಲ್ ಕೋಶಗಳು", "en": "Digital Koshas" } }
   ]
 }

@@ -1,33 +1,36 @@
 {
-  "eyebrow": { "kn": "೦೩.೧ — ಆ್ಯಪ್‌ಗಳು", "en": "03.1 — Apps" },
-  "heading": { "kn": "ಮೊಬೈಲ್ ಮತ್ತು ವೆಬ್ ಆ್ಯಪ್‌ಗಳು", "en": "Mobile & Web Apps" },
+  "eyebrow": { "kn": "೦೩.೧ - ಆ್ಯಪ್‌ಗಳು", "en": "03.1 - Apps" },
+  "heading": {
+    "kn": "ಯಕ್ಷವಾಹಿನಿಯ ಯೋಜನೆಗಳನ್ನು ಸುಲಭವಾಗಿ ಸದುಪಯೋಗಪಡಿಸುವುದಕ್ಕಾಗಿ ತಂತ್ರಾಂಶಗಳು",
+    "en": "Yakshavahini web and Android apps to browse our digital archives"
+  },
   "intro": {
     "kn": "ನಮ್ಮ ಡಿಜಿಟಲ್ ಸಂಗ್ರಹಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಲು ಇವು ಸಹಕಾರಿ.",
     "en": "Use these to browse our digital archives."
   },
-  "_comment": "Add playStoreUrl once the Android app is back online; status/note can be cleared then.",
+  "_comment": "Android item's url is a placeholder (yakshavahini.web.app) until the real Play Store link is ready - swap it in when available.",
   "items": [
     {
-      "name": { "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ — ವೆಬ್", "en": "Prasanga Prati Sangraha — Web" },
+      "name": { "kn": "ಯಕ್ಷವಾಹಿನಿ - ವೆಬ್", "en": "Yakshavahini - Web" },
       "platform": "web",
       "description": {
-        "kn": "1861+ ಪ್ರಸಂಗ ಪ್ರತಿಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ, ಉಚಿತವಾಗಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿಕೊಳ್ಳಿ.",
-        "en": "Browse and freely download 1,861+ scanned prasanga copies."
+        "kn": "ಯಕ್ಷವಾಹಿನಿಯ ಡಿಜಿಟಲ್ ಕೋಶಗಳನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಬ್ರೌಸ್ ಮಾಡಿ.",
+        "en": "Browse Yakshavahini's digital koshas online."
       },
-      "url": "https://prasangapustaka.web.app/home",
+      "url": "https://yakshavahini.web.app",
       "cta": { "kn": "ವೆಬ್ ಆ್ಯಪ್ ತೆರೆಯಿರಿ", "en": "Open Web App" },
       "status": "live"
     },
     {
-      "name": { "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ — ಆಂಡ್ರಾಯ್ಡ್", "en": "Prasanga Prati Sangraha — Android" },
+      "name": { "kn": "ಯಕ್ಷವಾಹಿನಿ - ಆಂಡ್ರಾಯ್ಡ್", "en": "Yakshavahini - Android" },
       "platform": "android",
       "description": {
-        "kn": "ಲ. ನಾ. ಭಟ್ ಅವರು ರೂಪಿಸಿದ ಮೊಬೈಲ್ ಆ್ಯಪ್. ಇತ್ತೀಚೆಗೆ ತಾಂತ್ರಿಕ ಕಾರಣಗಳಿಂದ ತಾತ್ಕಾಲಿಕವಾಗಿ ಸ್ಥಗಿತವಿದ್ದು, ಅಲ್ಲಿಯವರೆಗೆ ಮೇಲಿನ ವೆಬ್ ಆ್ಯಪ್ ಬಳಸಿ.",
-        "en": "Built by L. N. Bhat. Temporarily offline for technical reasons — use the web app above in the meantime."
+        "kn": "ಆಂಡ್ರಾಯ್ಡ್ ಆ್ಯಪ್.",
+        "en": "The Android app is coming soon."
       },
-      "url": "",
-      "cta": { "kn": "ತಾತ್ಕಾಲಿಕವಾಗಿ ಲಭ್ಯವಿಲ್ಲ", "en": "Temporarily unavailable" },
-      "status": "paused"
+      "url": "https://yakshavahini.web.app",
+      "cta": { "kn": "ಅನುಸ್ಥಾಪಿಸಿಕೊಳ್ಳಿ", "en": "Install from google play" },
+      "status": "live"
     }
   ]
 }
