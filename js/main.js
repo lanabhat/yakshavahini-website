@@ -193,7 +193,8 @@ const Lightbox = (() => {
   return { open, close };
 })();
 
-// ---------- Simple horizontal single-item carousel (no zoom) ----------
+// ---------- Horizontal scroll carousel (no zoom) ----------
+// Shows as many cards as fit the available width; arrows scroll by one card.
 
 function renderHCarousel(itemHtmls, idPrefix) {
   if (!itemHtmls.length) return "";
@@ -212,15 +213,28 @@ function renderHCarousel(itemHtmls, idPrefix) {
 
 function initHCarousel(idPrefix, count) {
   const track = document.getElementById(`${idPrefix}-track`);
-  if (!track || count < 2) return;
   const prevBtn = document.getElementById(`${idPrefix}-prev`);
   const nextBtn = document.getElementById(`${idPrefix}-next`);
-  let index = 0;
-  track.style.transition = "transform 0.5s cubic-bezier(0.65,0,0.35,1)";
-  function render() { track.style.transform = `translateX(-${index * 100}%)`; }
-  function goTo(i) { index = (i + count) % count; render(); }
-  prevBtn.addEventListener("click", () => goTo(index - 1));
-  nextBtn.addEventListener("click", () => goTo(index + 1));
+  if (!track || count < 2 || !prevBtn || !nextBtn) return;
+
+  function step() {
+    const slide = track.querySelector(".h-carousel-slide");
+    if (!slide) return track.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "0");
+    return slide.getBoundingClientRect().width + gap;
+  }
+  function updateButtons() {
+    const maxScroll = track.scrollWidth - track.clientWidth - 1;
+    prevBtn.disabled = track.scrollLeft <= 0;
+    nextBtn.disabled = track.scrollLeft >= maxScroll;
+    prevBtn.style.display = maxScroll > 0 ? "" : "none";
+    nextBtn.style.display = maxScroll > 0 ? "" : "none";
+  }
+  prevBtn.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+  nextBtn.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+  track.addEventListener("scroll", updateButtons);
+  window.addEventListener("resize", updateButtons);
+  updateButtons();
 }
 
 function renderAbout(data) {
