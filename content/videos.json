@@ -1,5 +1,5 @@
 {
-  "eyebrow": { "kn": "೧೦ - ವೀಡಿಯೋ", "en": "10 - Videos" },
+  "eyebrow": { "kn": "೧೦ - ದೃಶ್ಯ - ಶ್ರಾವ್ಯ", "en": "10 - Videos" },
   "heading": { "kn": "ಯಕ್ಷವಾಹಿನಿ ಯೂಟ್ಯೂಬ್", "en": "Yakshavahini on YouTube" },
   "intro": {
     "kn": "ನಮ್ಮ ಯೂಟ್ಯೂಬ್ ಚಾನೆಲ್‌ನಿಂದ ಆಯ್ದ ವೀಡಿಯೋಗಳು - ಪ್ರತಿ ಭೇಟಿಗೂ ಬೇರೆ ಬೇರೆ ವೀಡಿಯೋಗಳು ಕಾಣಿಸುತ್ತವೆ.",
@@ -7,7 +7,7 @@
   },
   "_comment": "'items' is a curated pool (scraped once from the channel's Videos tab, sorted by popularity, filtered to ones with real titles). The site picks 'showCount' of these at random on each page load. Add more entries here as new videos go up - id is the YouTube video ID (from youtube.com/watch?v=ID), subject is the bilingual category tag shown on the card.",
   "channelUrl": "https://www.youtube.com/@YakshaVahiniPrathistana",
-  "channelLabel": { "kn": "ಪೂರ್ಣ ಚಾನೆಲ್ ನೋಡಿ", "en": "Visit full channel" },
+  "channelLabel": { "kn": "ಕಣ್ಣಾಗಿ - ಕಿವಿಯಾಗಿ...", "en": "Visit full channel" },
   "showCount": 6,
   "items": [
     { "id": "f314AEdC-AQ", "title": "ಪಂತುವರಾಳಿ – ಏಕ", "subject": { "kn": "ಯಕ್ಷಮಟ್ಟುಕೋಶ", "en": "Yaksha Mattukosha" } },

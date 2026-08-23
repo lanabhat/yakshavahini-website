@@ -610,8 +610,6 @@ function renderContact(data) {
         <div class="value"><a href="mailto:${data.email.value}">${data.email.value}</a></div>
         <div class="label" style="margin-top:18px">${bi(data.website.label)}</div>
         <div class="value"><a href="https://${data.website.value}">${data.website.value}</a></div>
-        <div class="label" style="margin-top:18px">${bi(data.prasangaLibrary.label)}</div>
-        <div class="value"><a href="https://${data.prasangaLibrary.value}" target="_blank" rel="noopener">${data.prasangaLibrary.value}</a></div>
       </div>
       <div>
         <div class="label">${bi(data.address.label)}</div>
