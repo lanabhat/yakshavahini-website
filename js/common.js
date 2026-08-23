@@ -33,8 +33,8 @@ function setLang(lang) {
 }
 
 function initLangToggle() {
-  const saved = localStorage.getItem("yv-lang") || "kn";
-  setLang(saved);
+  // Language switching is temporarily disabled (Kannada-only) - ignore any saved preference.
+  setLang("kn");
   document.querySelectorAll(".lang-toggle button").forEach((btn) => {
     btn.addEventListener("click", () => setLang(btn.dataset.lang));
   });

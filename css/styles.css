@@ -108,7 +108,8 @@ a { color: inherit; text-decoration: none; }
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
 .lang-toggle {
-  display: flex;
+  /* Temporarily disabled: language switching is off for now, Kannada-only. */
+  display: none;
   border: 1px solid var(--border-dark);
   border-radius: 999px;
   overflow: hidden;
