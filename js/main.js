@@ -199,8 +199,8 @@ function renderAbout(data) {
     <div class="eyebrow" data-rv>${bi(data.eyebrow)}</div>
     <h2 data-rv>${bi(data.heading)}</h2>
     <div class="about-grid">
-      <div data-rv>
-        ${data.body.map(p => `<p>${bi(p)}</p>`).join("")}
+      <div class="about-copy" data-rv>
+        ${data.body.map(p => p.type === "quote" ? `<blockquote class="about-quote">${bi(p)}</blockquote>` : `<p>${bi(p)}</p>`).join("")}
       </div>
       <div data-rv>
         <div class="stat-cards">

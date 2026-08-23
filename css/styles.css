@@ -297,8 +297,19 @@ h3 { font-size: 1.25rem; }
 }
 
 /* ---------- About ---------- */
-.about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
-.about-grid p { margin: 0 0 20px; line-height: 1.9; text-align: justify; text-justify: inter-word; }
+.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: start; }
+.about-copy { font-size: 0.92rem; }
+.about-copy p { margin: 0 0 16px; line-height: 1.75; text-align: justify; text-justify: inter-word; }
+.about-copy strong { color: var(--pink); font-weight: 700; }
+.about-copy em { font-style: italic; opacity: 0.9; }
+.about-quote {
+  margin: 8px 0 20px;
+  padding: 14px 20px;
+  border-left: 3px solid var(--pink);
+  background: rgba(255, 255, 255, 0.03);
+  font-style: italic;
+  line-height: 1.7;
+}
 .about-photo { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border-light); margin-top: 20px; }
 .about-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; margin-top: 28px; }
