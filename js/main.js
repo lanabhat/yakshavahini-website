@@ -193,6 +193,36 @@ const Lightbox = (() => {
   return { open, close };
 })();
 
+// ---------- Simple horizontal single-item carousel (no zoom) ----------
+
+function renderHCarousel(itemHtmls, idPrefix) {
+  if (!itemHtmls.length) return "";
+  return `
+    <div class="h-carousel" id="${idPrefix}-carousel">
+      <div class="h-carousel-track" id="${idPrefix}-track">
+        ${itemHtmls.map(h => `<div class="h-carousel-slide">${h}</div>`).join("")}
+      </div>
+      ${itemHtmls.length > 1 ? `
+        <button class="carousel-nav carousel-prev" id="${idPrefix}-prev" type="button" aria-label="Previous">‹</button>
+        <button class="carousel-nav carousel-next" id="${idPrefix}-next" type="button" aria-label="Next">›</button>
+      ` : ""}
+    </div>
+  `;
+}
+
+function initHCarousel(idPrefix, count) {
+  const track = document.getElementById(`${idPrefix}-track`);
+  if (!track || count < 2) return;
+  const prevBtn = document.getElementById(`${idPrefix}-prev`);
+  const nextBtn = document.getElementById(`${idPrefix}-next`);
+  let index = 0;
+  track.style.transition = "transform 0.5s cubic-bezier(0.65,0,0.35,1)";
+  function render() { track.style.transform = `translateX(-${index * 100}%)`; }
+  function goTo(i) { index = (i + count) % count; render(); }
+  prevBtn.addEventListener("click", () => goTo(index - 1));
+  nextBtn.addEventListener("click", () => goTo(index + 1));
+}
+
 function renderAbout(data) {
   const el = document.getElementById("about-content");
   if (!el) return;
@@ -307,20 +337,20 @@ function renderLeadership(data) {
 function renderNews(data) {
   const el = document.getElementById("news-content");
   if (!el) return;
-  const highlightCards = data.highlights.map(h => `
-    <div class="news-card">
-      <div class="tag">${bi(h.tag)}</div>
-      <h3>${bi(h.title)}</h3>
-      <p>${bi(h.description)}</p>
-    </div>
-  `).join("");
 
   el.innerHTML = `
     <div class="eyebrow" data-rv>${bi(data.eyebrow)}</div>
     <h2 data-rv>${bi(data.heading)}</h2>
     <div id="blogger-posts"></div>
-    <div class="news-grid" id="news-fallback" data-rv>${highlightCards}</div>
+    <div id="news-fallback" data-rv>${renderHCarousel(data.highlights.map(h => `
+      <div class="news-card">
+        <div class="tag">${bi(h.tag)}</div>
+        <h3>${bi(h.title)}</h3>
+        <p>${bi(h.description)}</p>
+      </div>
+    `), "news-fallback")}</div>
   `;
+  initHCarousel("news-fallback", data.highlights.length);
 
   const sources = data.blogger?.sources || [];
   if (sources.length) {
@@ -376,7 +406,8 @@ async function loadBloggerFeeds(sources, maxPerSource, maxTotal) {
   const container = document.getElementById("blogger-posts");
   const fallback = document.getElementById("news-fallback");
   if (!entries.length) return; // leave the static fallback highlights visible
-  container.innerHTML = `<div class="news-grid">${entries.map(renderBloggerEntry).join("")}</div>`;
+  container.innerHTML = renderHCarousel(entries.map(renderBloggerEntry), "news-live");
+  initHCarousel("news-live", entries.length);
   if (fallback) fallback.style.display = "none";
 }
 
@@ -409,20 +440,19 @@ function renderVideos(data) {
     <div class="eyebrow" data-rv>${bi(data.eyebrow)}</div>
     <h2 data-rv>${bi(data.heading)}</h2>
     <p class="muted" data-rv>${bi(data.intro)}</p>
-    <div class="video-grid" data-rv>
-      ${picked.map(v => `
-        <div class="video-card" data-video-id="${v.id}">
-          <div class="video-thumb">
-            <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${v.title}" loading="lazy">
-            <span class="play-btn" aria-hidden="true">▶</span>
-          </div>
-          <div class="video-subject">${bi(v.subject)}</div>
-          <h3>${v.title}</h3>
+    <div data-rv>${renderHCarousel(picked.map(v => `
+      <div class="video-card" data-video-id="${v.id}">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${v.title}" loading="lazy">
+          <span class="play-btn" aria-hidden="true">▶</span>
         </div>
-      `).join("")}
-    </div>
+        <div class="video-subject">${bi(v.subject)}</div>
+        <h3>${v.title}</h3>
+      </div>
+    `), "videos")}</div>
     <a class="card-link" href="${data.channelUrl}" target="_blank" rel="noopener">${bi(data.channelLabel)} →</a>
   `;
+  initHCarousel("videos", picked.length);
   el.querySelectorAll(".video-card").forEach((card) => {
     card.addEventListener("click", () => {
       const id = card.dataset.videoId;
