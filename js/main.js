@@ -49,8 +49,8 @@ function renderHome(data) {
   el.innerHTML = `
     <div class="hero-grid">
       <div>
-        <div class="badge" data-rv>${bi(data.badge)}</div>
         <h1 data-rv>${bi(data.title)}</h1>
+        <div class="badge badge-sub" data-rv>${bi(data.badge)}</div>
         <p class="lede" data-rv>${bi(data.subtitle)}</p>
         <p class="lede muted" data-rv>${bi(data.lede)}</p>
         <div class="hero-cta" data-rv>
@@ -59,18 +59,177 @@ function renderHome(data) {
         </div>
       </div>
       <div class="hero-photos" data-rv>
-        <div class="photo photo-tall">
-          <img src="images/prasanga.jpg" alt="Prasanga book page">
-          <span class="caption">${bi(data.featuredPrasangaLabel)}</span>
-        </div>
-        <div class="photo-row">
-          <div class="photo"><img src="images/tenku.JPG" alt="Tenku tittu performance"><span class="caption" lang="en">tenku tittu</span></div>
-          <div class="photo"><img src="images/badagu.jpeg" alt="Badagu tittu performance"><span class="caption" lang="en">badagu tittu</span></div>
-        </div>
+        ${renderHeroCarousel(data.slideshow)}
       </div>
     </div>
   `;
+  initHeroCarousel(data.slideshow);
 }
+
+function renderHeroCarousel(slideshow) {
+  const slides = slideshow?.slides || [];
+  if (!slides.length) return "";
+  const slideImg = (s) => `<div class="carousel-slide"><img src="images/slideshow/${encodeURIComponent(s.file)}" alt=""></div>`;
+  return `
+    <div class="carousel photo-tall" id="hero-carousel">
+      <div class="carousel-track" id="hero-carousel-track">
+        ${slides.map(slideImg).join("")}
+      </div>
+      <button class="carousel-nav carousel-prev" id="hero-carousel-prev" type="button" aria-label="Previous image">‹</button>
+      <button class="carousel-nav carousel-next" id="hero-carousel-next" type="button" aria-label="Next image">›</button>
+      <button class="carousel-expand" id="hero-carousel-expand" type="button" aria-label="View larger">⤢</button>
+      <span class="caption" id="hero-carousel-caption">${bi(slides[0].caption)}</span>
+    </div>
+  `;
+}
+
+function initHeroCarousel(slideshow) {
+  const slides = slideshow?.slides || [];
+  const n = slides.length;
+  const track = document.getElementById("hero-carousel-track");
+  const caption = document.getElementById("hero-carousel-caption");
+  const carouselEl = document.getElementById("hero-carousel");
+  const prevBtn = document.getElementById("hero-carousel-prev");
+  const nextBtn = document.getElementById("hero-carousel-next");
+  const expandBtn = document.getElementById("hero-carousel-expand");
+  if (!track || n < 1) return;
+
+  const intervalMs = slideshow.intervalMs || 4000;
+  let index = 0;
+  let timer = null;
+
+  track.style.transition = "transform 0.7s cubic-bezier(0.65,0,0.35,1)";
+
+  function render() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    caption.innerHTML = bi(slides[index].caption);
+  }
+  function goTo(i) {
+    index = (i + n) % n;
+    render();
+  }
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+  function startAutoplay() {
+    stopAutoplay();
+    if (n > 1) timer = setInterval(next, intervalMs);
+  }
+  function stopAutoplay() {
+    if (timer) clearInterval(timer);
+    timer = null;
+  }
+
+  if (n > 1) {
+    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prev(); startAutoplay(); });
+    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); next(); startAutoplay(); });
+  } else {
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+  }
+
+  const openLightbox = () => {
+    stopAutoplay();
+    Lightbox.open(slides, index, {
+      onIndexChange: (i) => { index = i; render(); },
+      onClose: startAutoplay,
+    });
+  };
+  carouselEl.addEventListener("click", openLightbox);
+  expandBtn.addEventListener("click", (e) => { e.stopPropagation(); openLightbox(); });
+
+  startAutoplay();
+}
+
+// ---------- Lightbox (click-to-zoom image viewer) ----------
+
+const Lightbox = (() => {
+  let overlay = null;
+  let slides = [];
+  let index = 0;
+  let scale = 1;
+  let onIndexChange = null;
+  let onClose = null;
+
+  function render() {
+    const img = overlay.querySelector(".lightbox-img");
+    img.src = `images/slideshow/${encodeURIComponent(slides[index].file)}`;
+    img.style.transform = `scale(${scale})`;
+    overlay.querySelector(".lightbox-caption").innerHTML = bi(slides[index].caption);
+    overlay.querySelector(".lightbox-counter").textContent = `${index + 1} / ${slides.length}`;
+  }
+
+  function setScale(s) {
+    scale = Math.min(3, Math.max(1, s));
+    overlay.querySelector(".lightbox-img").style.transform = `scale(${scale})`;
+    overlay.querySelector(".lightbox-img").classList.toggle("zoomed", scale > 1);
+  }
+
+  function go(delta) {
+    index = (index + delta + slides.length) % slides.length;
+    scale = 1;
+    render();
+    if (onIndexChange) onIndexChange(index);
+  }
+
+  function onKey(e) {
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") go(1);
+    else if (e.key === "ArrowLeft") go(-1);
+    else if (e.key === "+" || e.key === "=") setScale(scale + 0.5);
+    else if (e.key === "-") setScale(scale - 0.5);
+  }
+
+  function close() {
+    if (!overlay) return;
+    document.removeEventListener("keydown", onKey);
+    overlay.remove();
+    overlay = null;
+    document.body.style.overflow = "";
+    if (onClose) onClose();
+  }
+
+  function open(slideList, startIndex, opts = {}) {
+    slides = slideList;
+    index = startIndex;
+    scale = 1;
+    onIndexChange = opts.onIndexChange || null;
+    onClose = opts.onClose || null;
+
+    overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+    overlay.innerHTML = `
+      <button class="lightbox-close" type="button" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+      <div class="lightbox-stage">
+        <img class="lightbox-img" src="" alt="">
+      </div>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+      <div class="lightbox-footer">
+        <span class="lightbox-caption"></span>
+        <div class="lightbox-zoom">
+          <button class="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+          <button class="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+        </div>
+        <span class="lightbox-counter"></span>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
+
+    overlay.querySelector(".lightbox-close").addEventListener("click", close);
+    overlay.querySelector(".lightbox-prev").addEventListener("click", () => go(-1));
+    overlay.querySelector(".lightbox-next").addEventListener("click", () => go(1));
+    overlay.querySelector(".lightbox-zoom-in").addEventListener("click", () => setScale(scale + 0.5));
+    overlay.querySelector(".lightbox-zoom-out").addEventListener("click", () => setScale(scale - 0.5));
+    overlay.querySelector(".lightbox-img").addEventListener("dblclick", () => setScale(scale === 1 ? 2 : 1));
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+    document.addEventListener("keydown", onKey);
+
+    render();
+  }
+
+  return { open, close };
+})();
 
 function renderAbout(data) {
   const el = document.getElementById("about-content");
@@ -80,11 +239,13 @@ function renderAbout(data) {
     <h2 data-rv>${bi(data.heading)}</h2>
     <div class="about-grid">
       <div data-rv>
-        <div class="about-photo"><img src="images/DSC07311.JPG" alt="Yakshagana vesha"></div>
         ${data.body.map(p => `<p>${bi(p)}</p>`).join("")}
       </div>
-      <div class="stat-cards" data-rv>
-        ${data.stats.map(s => `<div class="stat-card"><div class="stat-value">${s.value}</div><div class="stat-label">${bi(s.label)}</div></div>`).join("")}
+      <div data-rv>
+        <div class="stat-cards">
+          ${data.stats.map(s => `<div class="stat-card"><div class="stat-value">${s.value}</div><div class="stat-label">${bi(s.label)}</div></div>`).join("")}
+        </div>
+        <div class="about-photo"><img src="images/tenku.JPG" alt="Yakshagana performance"></div>
       </div>
     </div>
   `;

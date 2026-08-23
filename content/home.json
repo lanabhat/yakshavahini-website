@@ -4,8 +4,8 @@
     "en": "Est. 2016 · Registered Trust 2017"
   },
   "title": {
-    "kn": "ಯಕ್ಷವಾಹಿನಿ",
-    "en": "Yakshavahini"
+    "kn": "ಯಕ್ಷವಾಹಿನಿ ಪ್ರತಿಷ್ಠಾನ (ರಿ), ಬೆಂಗಳೂರು",
+    "en": "Yakshavahini Prathishtana (Regd.), Bengaluru"
   },
   "subtitle": {
     "kn": "ಯಕ್ಷಗಾನದ ಸಾಹಿತ್ಯ, ಪ್ರಸಂಗ, ಮಟ್ಟು, ಸಂಘಟನೆಗಳು ಹಾಗೂ ಪರಂಪರೆಯನ್ನು ಡಿಜಿಟಲ್ ರೂಪದಲ್ಲಿ ಸಂರಕ್ಷಿಸಿ ವಿಶ್ವದಾದ್ಯಂತ ಉಚಿತವಾಗಿ ತಲುಪಿಸುವ ಸ್ವಯಂಸೇವಕರ ಸಾಂಸ್ಕೃತಿಕ ಸಂಸ್ಥೆ.",
@@ -19,8 +19,22 @@
     "primary": { "kn": "ಯೋಜನೆಗಳನ್ನು ನೋಡಿ", "en": "See Our Projects" },
     "donate": { "kn": "ದೇಣಿಗೆ", "en": "Donate" }
   },
-  "featuredPrasangaLabel": {
-    "kn": "ಪ್ರಸಂಗ ಪುಟ",
-    "en": "Prasanga Page"
+  "slideshow": {
+    "intervalMs": 4000,
+    "slides": [
+      { "file": "prasanga.jpg", "caption": { "kn": "ಪ್ರಸಂಗ ಪುಟ", "en": "Prasanga Page" } },
+      { "file": "palm.jpg", "caption": { "kn": "ತಾಳೆಗರಿ ಹಸ್ತಪ್ರತಿ", "en": "Palm-leaf Manuscript" } },
+      { "file": "book.png", "caption": { "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ", "en": "Yaksha Pustakakosha" } },
+      { "file": "book2.jpg", "caption": { "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ", "en": "Yaksha Pustakakosha" } },
+      { "file": "mattukosha.jpg", "caption": { "kn": "ಯಕ್ಷಮಟ್ಟುಕೋಶ", "en": "Yaksha Mattukosha" } },
+      { "file": "sanghatana kosha.jpg", "caption": { "kn": "ಯಕ್ಷಸಂಘಟನಾಕೋಶ", "en": "Yaksha Sanghatanakosha" } },
+      { "file": "sanghatana kosha2.jpg", "caption": { "kn": "ಯಕ್ಷಸಂಘಟನಾಕೋಶ", "en": "Yaksha Sanghatanakosha" } },
+      { "file": "pustaka kosha.jpg", "caption": { "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ", "en": "Yaksha Pustakakosha" } },
+      { "file": "kavigalu.jpg", "caption": { "kn": "ಪ್ರಸಂಗಕವಿಗಳು", "en": "Prasanga Poets" } },
+      { "file": "saramsha.jpg", "caption": { "kn": "ಪ್ರಸಂಗ ಸಾರಾಂಶ", "en": "Prasanga Summary" } },
+      { "file": "adi narayana.jpg", "caption": { "kn": "ಪ್ರಸಂಗಕೋಶ ಪ್ರತಿ", "en": "Prasangakosha Document" } },
+      { "file": "app.jpg", "caption": { "kn": "ಯಕ್ಷವಾಹಿನಿ ವೆಬ್ ಆ್ಯಪ್", "en": "Yakshavahini Web App" } },
+      { "file": "mobile app.jpg", "caption": { "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಆ್ಯಪ್", "en": "Prasanga Prati App" } }
+    ]
   }
 }
