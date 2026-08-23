@@ -469,11 +469,48 @@ function renderVideos(data) {
   initHCarousel("videos", picked.length);
   el.querySelectorAll(".video-card").forEach((card) => {
     card.addEventListener("click", () => {
-      const id = card.dataset.videoId;
-      card.innerHTML = `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${id}?autoplay=1" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
-    }, { once: true });
+      VideoModal.open(card.dataset.videoId, card.querySelector("h3")?.textContent || "");
+    });
   });
 }
+
+// ---------- Video modal (popup player) ----------
+
+const VideoModal = (() => {
+  let overlay = null;
+
+  function onKey(e) { if (e.key === "Escape") close(); }
+
+  function close() {
+    if (!overlay) return;
+    document.removeEventListener("keydown", onKey);
+    overlay.remove();
+    overlay = null;
+    document.body.style.overflow = "";
+  }
+
+  function open(id, title) {
+    overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay video-modal-overlay";
+    overlay.innerHTML = `
+      <button class="lightbox-close" type="button" aria-label="Close">✕</button>
+      <div class="video-modal-stage">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/${id}?autoplay=1" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        ${title ? `<div class="video-modal-title">${title}</div>` : ""}
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
+
+    overlay.querySelector(".lightbox-close").addEventListener("click", close);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+    document.addEventListener("keydown", onKey);
+  }
+
+  return { open, close };
+})();
 
 function renderVolunteer(data) {
   const el = document.getElementById("volunteer-content");
