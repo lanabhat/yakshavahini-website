@@ -181,6 +181,7 @@ h3 { font-size: 1.25rem; }
   border-radius: 999px;
   padding: 6px 16px;
   font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   color: var(--pink);
   margin-bottom: 20px;
