@@ -69,6 +69,7 @@ async function boot() {
   const [projects, pages] = await Promise.all([loadJSON("projects"), loadJSON("project-pages")]);
   renderNavProjectsDropdown(projects);
   initNavDropdowns();
+  initMobileNav();
   renderProjectDetail(slug, projects, pages);
   const year = new Date().getFullYear();
   const yk = document.getElementById("footer-year-kn");

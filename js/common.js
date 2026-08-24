@@ -79,6 +79,31 @@ function renderNavProjectsDropdown(projectsData) {
     .join("");
 }
 
+function initMobileNav() {
+  const header = document.querySelector(".site-header");
+  const toggle = document.getElementById("nav-toggle");
+  const nav = document.querySelector(".site-nav");
+  if (!header || !toggle || !nav) return;
+
+  function close() {
+    header.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+  toggle.addEventListener("click", () => {
+    const open = header.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.tagName === "A" && !e.target.classList.contains("nav-dropdown-trigger")) close();
+  });
+  document.addEventListener("click", (e) => {
+    if (!header.contains(e.target)) close();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) close();
+  });
+}
+
 function initNavDropdowns() {
   document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
     const trigger = dropdown.querySelector(".nav-dropdown-trigger");

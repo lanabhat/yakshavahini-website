@@ -107,6 +107,21 @@ a { color: inherit; text-decoration: none; }
 
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px; height: 38px;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 8px;
+}
+.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--text-on-dark); border-radius: 1px; }
+.nav-donate-mobile { display: none; }
+
 .lang-toggle {
   /* Temporarily disabled: language switching is off for now, Kannada-only. */
   display: none;
@@ -501,7 +516,26 @@ h3 { font-size: 1.25rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .site-nav { display: none; }
+  .site-nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; flex-wrap: nowrap; gap: 2px;
+    background: #0c1220; border-bottom: 1px solid var(--border-dark);
+    padding: 12px 24px 20px;
+    max-height: calc(100vh - 64px); overflow-y: auto;
+  }
+  .site-header.nav-open .site-nav { display: flex; }
+  .site-nav a { padding: 10px 0; border-bottom: 1px solid var(--border-dark); }
+  .nav-dropdown { position: static; }
+  .nav-dropdown-menu { position: static; margin: 0 0 0 12px; box-shadow: none; border: none; padding: 0; }
+  .nav-dropdown.open .nav-dropdown-menu { border-bottom: 1px solid var(--border-dark); padding-bottom: 8px; }
+  .header-actions .btn-donate { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-donate-mobile {
+    display: block; margin-top: 10px; padding: 12px; text-align: center;
+    background: var(--pink); color: #fff; font-weight: 700; border-radius: 8px;
+  }
+
   .hero-grid, .about-grid, .volunteer-grid, .donate-grid, .donors-layout { grid-template-columns: 1fr; }
   .donor-photo-frame { max-width: 320px; }
   .project-grid { grid-template-columns: 1fr; }
