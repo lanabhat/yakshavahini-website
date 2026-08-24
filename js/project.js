@@ -70,6 +70,7 @@ async function boot() {
   renderNavProjectsDropdown(projects);
   initNavDropdowns();
   initMobileNav();
+  initBackToTop();
   renderProjectDetail(slug, projects, pages);
   const year = new Date().getFullYear();
   const yk = document.getElementById("footer-year-kn");

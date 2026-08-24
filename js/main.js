@@ -637,6 +637,7 @@ async function boot() {
   renderNavProjectsDropdown(projects);
   initNavDropdowns();
   initMobileNav();
+  initBackToTop();
   renderApps(apps);
   renderAchievements(achievements);
   renderLeadership(leadership);

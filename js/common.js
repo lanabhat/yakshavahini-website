@@ -79,6 +79,22 @@ function renderNavProjectsDropdown(projectsData) {
     .join("");
 }
 
+function initBackToTop() {
+  const btn = document.createElement("button");
+  btn.className = "back-to-top";
+  btn.type = "button";
+  btn.setAttribute("aria-label", "Back to top");
+  btn.innerHTML = "↑";
+  document.body.appendChild(btn);
+
+  function update() {
+    btn.classList.toggle("visible", window.scrollY > 500);
+  }
+  btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+}
+
 function initMobileNav() {
   const header = document.querySelector(".site-header");
   const toggle = document.getElementById("nav-toggle");

@@ -269,6 +269,23 @@ h3 { font-size: 1.25rem; }
 }
 .carousel-expand:hover { background: rgba(8,13,24,0.85); border-color: var(--gold); }
 
+/* ---------- Back to top ---------- */
+.back-to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 90;
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid var(--border-dark); background: rgba(8,13,24,0.85);
+  color: var(--text-on-dark); font-size: 1.2rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity 0.2s, transform 0.2s, border-color 0.15s;
+  backdrop-filter: blur(4px);
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 640px) {
+  .back-to-top { right: 16px; bottom: 16px; width: 42px; height: 42px; }
+}
+
 /* ---------- Lightbox ---------- */
 .lightbox-overlay {
   position: fixed; inset: 0; z-index: 1000;
