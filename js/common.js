@@ -87,12 +87,17 @@ function initBackToTop() {
   btn.innerHTML = "↑";
   document.body.appendChild(btn);
 
-  function update() {
-    btn.classList.toggle("visible", window.scrollY > 500);
+  let hideTimer = null;
+  function show() {
+    if (window.scrollY <= 500) return;
+    btn.classList.add("visible");
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => btn.classList.remove("visible"), 2000);
   }
+  window.addEventListener("scroll", show, { passive: true });
+  btn.addEventListener("mouseenter", () => clearTimeout(hideTimer));
+  btn.addEventListener("mouseleave", show);
   btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-  window.addEventListener("scroll", update, { passive: true });
-  update();
 }
 
 function initMobileNav() {
