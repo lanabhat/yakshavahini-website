@@ -64,6 +64,7 @@ function renderProjectDetail(slug, projectsData, pagesData) {
 }
 
 async function boot() {
+  initPreLaunchRedirect();
   initLangToggle();
   const slug = getSlug();
   const [projects, pages] = await Promise.all([loadJSON("projects"), loadJSON("project-pages")]);

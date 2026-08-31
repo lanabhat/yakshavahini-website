@@ -286,6 +286,19 @@ h3 { font-size: 1.25rem; }
   .back-to-top { right: 16px; bottom: 16px; width: 42px; height: 42px; }
 }
 
+/* ---------- Pre-launch redirect overlay ---------- */
+.prelaunch-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(6,9,16,0.96);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  animation: yvFadeIn 0.2s ease both;
+}
+.prelaunch-message {
+  max-width: 480px; text-align: center;
+  color: #eef2f8; font-size: 1.05rem; line-height: 1.7;
+}
+
 /* ---------- Lightbox ---------- */
 .lightbox-overlay {
   position: fixed; inset: 0; z-index: 1000;

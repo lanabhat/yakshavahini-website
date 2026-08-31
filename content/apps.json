@@ -17,14 +17,14 @@
         "en": "Browse Yakshavahini's digital koshas online."
       },
       "url": "https://yakshavahini.web.app",
-      "cta": { "kn": "ವೆಬ್ ಆ್ಯಪ್ ತೆರೆಯಿರಿ", "en": "Open Web App" },
+      "cta": { "kn": "ತಂತ್ರಾಂಶದ ಅಂತರ್ಜಾಲೀಯ ಪ್ರತಿ", "en": "Open Web App" },
       "status": "live"
     },
     {
       "name": { "kn": "ಯಕ್ಷವಾಹಿನಿ - ಆಂಡ್ರಾಯ್ಡ್", "en": "Yakshavahini - Android" },
       "platform": "android",
       "description": {
-        "kn": "ಯಕ್ಷವಾಹಿನಿಯ ಡಿಜಿಟಲ್ ಕೋಶಗಳನ್ನು ಆಂಡ್ರಾಯ್ಡ್ ಆ್ಯಪ್‌ನಲ್ಲಿ ಬ್ರೌಸ್ ಮಾಡಿ.",
+        "kn": "ಯಕ್ಷವಾಹಿನಿಯ ಡಿಜಿಟಲ್ ಕೋಶಗಳು ನಿಮ್ಮ ಆಂಡ್ರಾಯ್ಡ್ ಚರವಾಣಿಯಲ್ಲಿ.",
         "en": "Browse Yakshavahini's digital koshas on Android."
       },
       "url": "https://play.google.com/store/apps/details?id=com.yakshavahini.app",
