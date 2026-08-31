@@ -1,6 +1,10 @@
 {
   "eyebrow": { "kn": "೦೬ - ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮ", "en": "06 - News & Events" },
   "heading": { "kn": "ಇತ್ತೀಚಿನ ಸುದ್ದಿ", "en": "Latest News" },
+  "blogLink": {
+    "label": { "kn": "ಸುದ್ದಿಗಳಿಗಾಗಿ ಭೇಟಿ ನೀಡಿ", "en": "Visit for more news" },
+    "url": "https://blog.yakshavahini.com"
+  },
   "blogger": {
     "_comment": "Aggregates posts from the org's main blog and its six project blogs. IMPORTANT: yakshavahini.com's main blog will move from the apex domain to a subdomain (see HOSTING.md) once the apex is repointed at the new static site - update the 'main' source's feedUrl to that new subdomain at that time, or this source will stop resolving.",
     "maxPerSource": 4,

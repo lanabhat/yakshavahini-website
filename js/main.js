@@ -363,6 +363,7 @@ function renderNews(data) {
         <p>${bi(h.description)}</p>
       </div>
     `), "news-fallback")}</div>
+    ${data.blogLink ? `<a class="card-link" href="${data.blogLink.url}" target="_blank" rel="noopener" data-rv>${bi(data.blogLink.label)} →</a>` : ""}
   `;
   initHCarousel("news-fallback", data.highlights.length);
 
