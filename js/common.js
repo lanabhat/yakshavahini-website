@@ -53,12 +53,25 @@ function initPreLaunchRedirect() {
   overlay.innerHTML = `
     <div class="prelaunch-message">
       <img class="prelaunch-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxZbelGLtX75kWglY_N7_SI6ufP4jMpw13JCRtiaUd0g1GGzImNsLlAkaebG6olIJS2Z0UxcMDqLEHQSPk3Auiv80HEa8_WydKtCkPlC4kG8Eqdm9XK8_2tvbZaFKrLwZ68iZmQ3G3qVTcZ7mTZHES827KyaepgZ2BzRFyg2EIu4qaBnFQjVNwozPFhvsE/s1600/WhatsApp%20Image%202026-08-30%20at%2010.23.41.jpeg" alt="">
-      <p lang="kn">ಯಕ್ಷವಾಹಿನಿಯ ನವೀಕೃತ ಅಂತರ್ಜಾಲ ತಾಣ ಮತ್ತು ತಂತ್ರಾಂಶದ ಲೋಕಾರ್ಪಣೆ ಸೆಪ್ಟೆಂಬರ್ 12 2026 ರಂದು</p>
+      <p lang="kn" class="prelaunch-bypass">ಯಕ್ಷವಾಹಿನಿಯ ನವೀಕೃತ ಅಂತರ್ಜಾಲ ತಾಣ ಮತ್ತು ತಂತ್ರಾಂಶದ ಲೋಕಾರ್ಪಣೆ ಸೆಪ್ಟೆಂಬರ್ 12 2026 ರಂದು</p>
       <a class="btn btn-gold" href="https://yakshavahini.blogspot.com" target="_blank" rel="noopener">ಬ್ಲಾಗ್‌ಗೆ ಭೇಟಿ ನೀಡಿ</a>
     </div>
   `;
   document.body.appendChild(overlay);
   document.body.style.overflow = "hidden";
+
+  // Hidden bypass: 5 clicks on the message text (within 1.5s of each other) dismisses the overlay.
+  let clickCount = 0;
+  let lastClickTime = 0;
+  overlay.querySelector(".prelaunch-bypass").addEventListener("click", () => {
+    const now = Date.now();
+    clickCount = now - lastClickTime > 1500 ? 1 : clickCount + 1;
+    lastClickTime = now;
+    if (clickCount >= 5) {
+      overlay.remove();
+      document.body.style.overflow = "";
+    }
+  });
 }
 
 function shuffle(arr) {
