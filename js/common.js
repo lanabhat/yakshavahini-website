@@ -45,6 +45,13 @@ function initLangToggle() {
   });
 }
 
+const PRELAUNCH_SLIDES = [
+  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxZbelGLtX75kWglY_N7_SI6ufP4jMpw13JCRtiaUd0g1GGzImNsLlAkaebG6olIJS2Z0UxcMDqLEHQSPk3Auiv80HEa8_WydKtCkPlC4kG8Eqdm9XK8_2tvbZaFKrLwZ68iZmQ3G3qVTcZ7mTZHES827KyaepgZ2BzRFyg2EIu4qaBnFQjVNwozPFhvsE/s1600/WhatsApp%20Image%202026-08-30%20at%2010.23.41.jpeg" },
+  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixh4rRAH1iDyk9x7x84hN4Tu287UymHeLDDDvirNwEzF8W902Zl0WHcVN4oF_YilRwBUH4iWyXt5UrJYGjobvr7DbIxpYQDKoKDPaEERCsHgLtcl-30-84d0crbuvj27FfJ3wkVcRpkKicAr1OuEPoty_WfUpZXKUdI8pQjJ0oB_MgODs9HdugApduZlVS/w397-h640/img12.jpg" },
+  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPFkCxOZY0ZdXixJ2_J1XsOjKfgB-eYZ9pJtD1QQHnELFzQXk_zSoQViFQu09XVRWuStTQGw3u_yLu1l6_D1wl32Z6eoZ4UnY6tcWbQ1quPLaIex_u_a8Ia5x7DcJ05-ewA4WHLbvnIkEx7-IEeOBcqXOWbRakqnqRTRGZcmqxs3Yj_MXl3bqMRwYVk_St/w588-h640/img17.jpg" },
+  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOdXZTWYjiwZkrCGA9vZAnLgrdH1EPtanTqO2B02bSDpMt-5xouKnDRzv0fNMagyDVkhOEKqsGr_Z9COioz9Zz4kPbA6bvvLQG0wo_xNc0Oh9MFvMaWqkJQ7Pzw_w7fGE8i8aVLdzfQ-y2LqhyphenhyphenVNXlPIo-CuLkNULmIpR4fvrClBit0fBHXCC2qxen2dCO/w640-h480/img24.jpg" },
+];
+
 function initPreLaunchRedirect() {
   if (new Date() >= LAUNCH_DATE) return;
 
@@ -52,13 +59,14 @@ function initPreLaunchRedirect() {
   overlay.className = "prelaunch-overlay";
   overlay.innerHTML = `
     <div class="prelaunch-message">
-      <img class="prelaunch-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxZbelGLtX75kWglY_N7_SI6ufP4jMpw13JCRtiaUd0g1GGzImNsLlAkaebG6olIJS2Z0UxcMDqLEHQSPk3Auiv80HEa8_WydKtCkPlC4kG8Eqdm9XK8_2tvbZaFKrLwZ68iZmQ3G3qVTcZ7mTZHES827KyaepgZ2BzRFyg2EIu4qaBnFQjVNwozPFhvsE/s1600/WhatsApp%20Image%202026-08-30%20at%2010.23.41.jpeg" alt="">
+      <div class="prelaunch-carousel-wrap">${renderCarousel(PRELAUNCH_SLIDES, "prelaunch-carousel")}</div>
       <p lang="kn" class="prelaunch-bypass">ಯಕ್ಷವಾಹಿನಿಯ ನವೀಕೃತ ಅಂತರ್ಜಾಲ ತಾಣ ಮತ್ತು ತಂತ್ರಾಂಶದ ಲೋಕಾರ್ಪಣೆ ಸೆಪ್ಟೆಂಬರ್ 12 2026 ರಂದು</p>
       <a class="btn btn-gold" href="https://yakshavahini.blogspot.com" target="_blank" rel="noopener">ಬ್ಲಾಗ್‌ಗೆ ಭೇಟಿ ನೀಡಿ</a>
     </div>
   `;
   document.body.appendChild(overlay);
   document.body.style.overflow = "hidden";
+  initCarousel(PRELAUNCH_SLIDES, "prelaunch-carousel");
 
   // Hidden bypass: 5 clicks on the message text (within 1.5s of each other) dismisses the overlay.
   let clickCount = 0;
@@ -73,6 +81,161 @@ function initPreLaunchRedirect() {
     }
   });
 }
+
+// ---------- Reusable image carousel + Lightbox (click-to-zoom viewer) ----------
+// Used by the homepage hero slideshow and the pre-launch overlay gallery.
+
+function resolveImageSrc(file, basePath) {
+  return /^https?:\/\//.test(file) ? file : `${basePath}${encodeURIComponent(file)}`;
+}
+
+function renderCarousel(slides, idPrefix, { basePath = "", tall = false } = {}) {
+  if (!slides.length) return "";
+  const slideImg = (s) => `<div class="carousel-slide"><img src="${resolveImageSrc(s.file, basePath)}" alt=""></div>`;
+  return `
+    <div class="carousel${tall ? " photo-tall" : ""}" id="${idPrefix}">
+      <div class="carousel-track" id="${idPrefix}-track">
+        ${slides.map(slideImg).join("")}
+      </div>
+      ${slides.length > 1 ? `
+        <button class="carousel-nav carousel-prev" id="${idPrefix}-prev" type="button" aria-label="Previous image">‹</button>
+        <button class="carousel-nav carousel-next" id="${idPrefix}-next" type="button" aria-label="Next image">›</button>
+      ` : ""}
+      <button class="carousel-expand" id="${idPrefix}-expand" type="button" aria-label="View larger">⤢</button>
+      ${slides[0].caption ? `<span class="caption" id="${idPrefix}-caption">${bi(slides[0].caption)}</span>` : ""}
+    </div>
+  `;
+}
+
+function initCarousel(slides, idPrefix, { intervalMs = 4000, basePath = "" } = {}) {
+  const n = slides.length;
+  const track = document.getElementById(`${idPrefix}-track`);
+  const caption = document.getElementById(`${idPrefix}-caption`);
+  const carouselEl = document.getElementById(idPrefix);
+  const prevBtn = document.getElementById(`${idPrefix}-prev`);
+  const nextBtn = document.getElementById(`${idPrefix}-next`);
+  const expandBtn = document.getElementById(`${idPrefix}-expand`);
+  if (!track || n < 1) return;
+
+  let index = 0;
+  let timer = null;
+  track.style.transition = "transform 0.7s cubic-bezier(0.65,0,0.35,1)";
+
+  function render() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    if (caption) caption.innerHTML = bi(slides[index].caption);
+  }
+  function goTo(i) { index = (i + n) % n; render(); }
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+  function startAutoplay() { stopAutoplay(); if (n > 1) timer = setInterval(next, intervalMs); }
+  function stopAutoplay() { if (timer) clearInterval(timer); timer = null; }
+
+  if (n > 1 && prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prev(); startAutoplay(); });
+    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); next(); startAutoplay(); });
+  }
+
+  const openLightbox = () => {
+    stopAutoplay();
+    Lightbox.open(slides, index, { basePath, onIndexChange: (i) => { index = i; render(); }, onClose: startAutoplay });
+  };
+  carouselEl.addEventListener("click", openLightbox);
+  if (expandBtn) expandBtn.addEventListener("click", (e) => { e.stopPropagation(); openLightbox(); });
+
+  startAutoplay();
+}
+
+const Lightbox = (() => {
+  let overlay = null;
+  let slides = [];
+  let index = 0;
+  let scale = 1;
+  let basePath = "";
+  let onIndexChange = null;
+  let onClose = null;
+
+  function render() {
+    const img = overlay.querySelector(".lightbox-img");
+    img.src = resolveImageSrc(slides[index].file, basePath);
+    img.style.transform = `scale(${scale})`;
+    overlay.querySelector(".lightbox-caption").innerHTML = bi(slides[index].caption);
+    overlay.querySelector(".lightbox-counter").textContent = `${index + 1} / ${slides.length}`;
+  }
+
+  function setScale(s) {
+    scale = Math.min(3, Math.max(1, s));
+    overlay.querySelector(".lightbox-img").style.transform = `scale(${scale})`;
+    overlay.querySelector(".lightbox-img").classList.toggle("zoomed", scale > 1);
+  }
+
+  function go(delta) {
+    index = (index + delta + slides.length) % slides.length;
+    scale = 1;
+    render();
+    if (onIndexChange) onIndexChange(index);
+  }
+
+  function onKey(e) {
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") go(1);
+    else if (e.key === "ArrowLeft") go(-1);
+    else if (e.key === "+" || e.key === "=") setScale(scale + 0.5);
+    else if (e.key === "-") setScale(scale - 0.5);
+  }
+
+  function close() {
+    if (!overlay) return;
+    document.removeEventListener("keydown", onKey);
+    overlay.remove();
+    overlay = null;
+    document.body.style.overflow = "";
+    if (onClose) onClose();
+  }
+
+  function open(slideList, startIndex, opts = {}) {
+    slides = slideList;
+    index = startIndex;
+    scale = 1;
+    basePath = opts.basePath || "";
+    onIndexChange = opts.onIndexChange || null;
+    onClose = opts.onClose || null;
+
+    overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+    overlay.innerHTML = `
+      <button class="lightbox-close" type="button" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+      <div class="lightbox-stage">
+        <img class="lightbox-img" src="" alt="">
+      </div>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+      <div class="lightbox-footer">
+        <span class="lightbox-caption"></span>
+        <div class="lightbox-zoom">
+          <button class="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+          <button class="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+        </div>
+        <span class="lightbox-counter"></span>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
+
+    overlay.querySelector(".lightbox-close").addEventListener("click", close);
+    overlay.querySelector(".lightbox-prev").addEventListener("click", () => go(-1));
+    overlay.querySelector(".lightbox-next").addEventListener("click", () => go(1));
+    overlay.querySelector(".lightbox-zoom-in").addEventListener("click", () => setScale(scale + 0.5));
+    overlay.querySelector(".lightbox-zoom-out").addEventListener("click", () => setScale(scale - 0.5));
+    overlay.querySelector(".lightbox-img").addEventListener("dblclick", () => setScale(scale === 1 ? 2 : 1));
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+    document.addEventListener("keydown", onKey);
+
+    render();
+  }
+
+  return { open, close };
+})();
 
 function shuffle(arr) {
   const a = arr.slice();
