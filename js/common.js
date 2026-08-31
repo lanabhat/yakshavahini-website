@@ -52,15 +52,13 @@ function initPreLaunchRedirect() {
   overlay.className = "prelaunch-overlay";
   overlay.innerHTML = `
     <div class="prelaunch-message">
-      <p lang="kn">ಜಾಲತಾಣ ಸೆಪ್ಟೆಂಬರ್ 12ರಂದು ಪ್ರಾರಂಭವಾಗಲಿದೆ.<br>ಸದ್ಯಕ್ಕೆ yakshavahini.blogspot.com ಗೆ ಕರೆದೊಯ್ಯಲಾಗುತ್ತಿದೆ...</p>
+      <img class="prelaunch-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxZbelGLtX75kWglY_N7_SI6ufP4jMpw13JCRtiaUd0g1GGzImNsLlAkaebG6olIJS2Z0UxcMDqLEHQSPk3Auiv80HEa8_WydKtCkPlC4kG8Eqdm9XK8_2tvbZaFKrLwZ68iZmQ3G3qVTcZ7mTZHES827KyaepgZ2BzRFyg2EIu4qaBnFQjVNwozPFhvsE/s1600/WhatsApp%20Image%202026-08-30%20at%2010.23.41.jpeg" alt="">
+      <p lang="kn">ಯಕ್ಷವಾಹಿನಿಯ ನವೀಕೃತ ಅಂತರ್ಜಾಲ ತಾಣ ಮತ್ತು ತಂತ್ರಾಂಶದ ಲೋಕಾರ್ಪಣೆ ಸೆಪ್ಟೆಂಬರ್ 12 2026 ರಂದು</p>
+      <a class="btn btn-gold" href="https://yakshavahini.blogspot.com" target="_blank" rel="noopener">ಬ್ಲಾಗ್‌ಗೆ ಭೇಟಿ ನೀಡಿ</a>
     </div>
   `;
   document.body.appendChild(overlay);
   document.body.style.overflow = "hidden";
-
-  setTimeout(() => {
-    window.location.replace("https://yakshavahini.blogspot.com");
-  }, 5000);
 }
 
 function shuffle(arr) {

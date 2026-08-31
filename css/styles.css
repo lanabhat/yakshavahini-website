@@ -291,13 +291,20 @@ h3 { font-size: 1.25rem; }
   position: fixed; inset: 0; z-index: 2000;
   background: rgba(6,9,16,0.96);
   display: flex; align-items: center; justify-content: center;
-  padding: 24px;
+  padding: 24px; overflow-y: auto;
   animation: yvFadeIn 0.2s ease both;
 }
 .prelaunch-message {
   max-width: 480px; text-align: center;
   color: #eef2f8; font-size: 1.05rem; line-height: 1.7;
 }
+.prelaunch-image {
+  max-width: 100%; max-height: 60vh; width: auto;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.prelaunch-message .btn { margin-top: 24px; }
 
 /* ---------- Lightbox ---------- */
 .lightbox-overlay {
