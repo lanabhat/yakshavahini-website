@@ -68,7 +68,7 @@
       "links": [
         {
           "label": { "kn": "ಮಟ್ಟುಕೋಶ ಆ್ಯಪ್‌ನಲ್ಲಿ", "en": "Mattukosha in the App" },
-          "url": "https://yakshavahini.web.app/mattukosha"
+          "url": "https://app.yakshavahini.com/mattukosha"
         },
         {
           "label": { "kn": "ದಾಖಲಾದ ಎಲ್ಲಾ ಮಟ್ಟುಗಳ ಪಟ್ಟಿ", "en": "List of All Documented Mattus" },
@@ -93,7 +93,7 @@
       "links": [
         {
           "label": { "kn": "ಯಕ್ಷಸಂಘಟನಾ ಕೋಶ App ನಲ್ಲಿ", "en": "Yaksha Sanghatanakosha in the App" },
-          "url": "https://yakshavahini.web.app/sanghatanakosha"
+          "url": "https://app.yakshavahini.com/sanghatanakosha"
         },
         {
           "label": { "kn": "ಯಕ್ಷಸಂಘಟನಾ ಕೋಶದ ಪಟ್ಟಿ", "en": "List of Yaksha Sanghatanakosha" },
@@ -110,7 +110,7 @@
       "links": [
         {
           "label": { "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ App ನಲ್ಲಿ", "en": "Yaksha Pustakakosha in the App" },
-          "url": "https://yakshavahini.web.app/pustakakosha"
+          "url": "https://app.yakshavahini.com/pustakakosha"
         }
       ],
       "body": [
