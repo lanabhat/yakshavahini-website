@@ -65,6 +65,7 @@ function renderProjectDetail(slug, projectsData, pagesData) {
 
 async function boot() {
   initLangToggle();
+  initThemeToggle();
   const slug = getSlug();
   const [projects, pages] = await Promise.all([loadJSON("projects"), loadJSON("project-pages")]);
   renderNavProjectsDropdown(projects);

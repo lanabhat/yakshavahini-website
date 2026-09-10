@@ -463,6 +463,7 @@ function renderContact(data) {
 
 async function boot() {
   initLangToggle();
+  initThemeToggle();
   const [home, about, projects, apps, achievements, leadership, news, videos, volunteer, donate, donors, contact] = await Promise.all([
     loadJSON("home"), loadJSON("about"), loadJSON("projects"), loadJSON("apps"), loadJSON("achievements"),
     loadJSON("leadership"), loadJSON("news"), loadJSON("videos"), loadJSON("volunteer"), loadJSON("donate"), loadJSON("donors"), loadJSON("contact"),

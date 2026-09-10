@@ -40,6 +40,21 @@ function initLangToggle() {
   });
 }
 
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  document.querySelectorAll(".theme-toggle button").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.theme === theme);
+  });
+  localStorage.setItem("yv-theme", theme);
+}
+
+function initThemeToggle() {
+  setTheme(localStorage.getItem("yv-theme") || "dark");
+  document.querySelectorAll(".theme-toggle button").forEach((btn) => {
+    btn.addEventListener("click", () => setTheme(btn.dataset.theme));
+  });
+}
+
 // ---------- Reusable image carousel + Lightbox (click-to-zoom viewer) ----------
 // Used by the homepage hero slideshow.
 
