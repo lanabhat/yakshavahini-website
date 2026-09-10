@@ -462,7 +462,6 @@ function renderContact(data) {
 // ---------- Boot ----------
 
 async function boot() {
-  initPreLaunchRedirect();
   initLangToggle();
   const [home, about, projects, apps, achievements, leadership, news, videos, volunteer, donate, donors, contact] = await Promise.all([
     loadJSON("home"), loadJSON("about"), loadJSON("projects"), loadJSON("apps"), loadJSON("achievements"),

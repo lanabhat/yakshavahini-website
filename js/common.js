@@ -2,11 +2,6 @@
 
 const CONTENT_BASE = "content";
 
-// Site launch date - until this passes, visitors get redirected to the interim blog.
-// To change the launch date, edit this line only; the redirect turns itself off
-// automatically once the date passes, no other cleanup needed.
-const LAUNCH_DATE = new Date("2026-09-12T00:00:00");
-
 const SOCIAL_ICONS = {
   youtube: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12Z"/></svg>',
   facebook: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>',
@@ -45,45 +40,8 @@ function initLangToggle() {
   });
 }
 
-const PRELAUNCH_SLIDES = [
-  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxZbelGLtX75kWglY_N7_SI6ufP4jMpw13JCRtiaUd0g1GGzImNsLlAkaebG6olIJS2Z0UxcMDqLEHQSPk3Auiv80HEa8_WydKtCkPlC4kG8Eqdm9XK8_2tvbZaFKrLwZ68iZmQ3G3qVTcZ7mTZHES827KyaepgZ2BzRFyg2EIu4qaBnFQjVNwozPFhvsE/s1600/WhatsApp%20Image%202026-08-30%20at%2010.23.41.jpeg" },
-  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixh4rRAH1iDyk9x7x84hN4Tu287UymHeLDDDvirNwEzF8W902Zl0WHcVN4oF_YilRwBUH4iWyXt5UrJYGjobvr7DbIxpYQDKoKDPaEERCsHgLtcl-30-84d0crbuvj27FfJ3wkVcRpkKicAr1OuEPoty_WfUpZXKUdI8pQjJ0oB_MgODs9HdugApduZlVS/w397-h640/img12.jpg" },
-  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPFkCxOZY0ZdXixJ2_J1XsOjKfgB-eYZ9pJtD1QQHnELFzQXk_zSoQViFQu09XVRWuStTQGw3u_yLu1l6_D1wl32Z6eoZ4UnY6tcWbQ1quPLaIex_u_a8Ia5x7DcJ05-ewA4WHLbvnIkEx7-IEeOBcqXOWbRakqnqRTRGZcmqxs3Yj_MXl3bqMRwYVk_St/w588-h640/img17.jpg" },
-  { file: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOdXZTWYjiwZkrCGA9vZAnLgrdH1EPtanTqO2B02bSDpMt-5xouKnDRzv0fNMagyDVkhOEKqsGr_Z9COioz9Zz4kPbA6bvvLQG0wo_xNc0Oh9MFvMaWqkJQ7Pzw_w7fGE8i8aVLdzfQ-y2LqhyphenhyphenVNXlPIo-CuLkNULmIpR4fvrClBit0fBHXCC2qxen2dCO/w640-h480/img24.jpg" },
-];
-
-function initPreLaunchRedirect() {
-  if (new Date() >= LAUNCH_DATE) return;
-
-  const overlay = document.createElement("div");
-  overlay.className = "prelaunch-overlay";
-  overlay.innerHTML = `
-    <div class="prelaunch-message">
-      <div class="prelaunch-carousel-wrap">${renderCarousel(PRELAUNCH_SLIDES, "prelaunch-carousel")}</div>
-      <p lang="kn" class="prelaunch-bypass">ಯಕ್ಷವಾಹಿನಿಯ ನವೀಕೃತ ಅಂತರ್ಜಾಲ ತಾಣ ಮತ್ತು ತಂತ್ರಾಂಶದ ಲೋಕಾರ್ಪಣೆ ಸೆಪ್ಟೆಂಬರ್ 12 2026 ರಂದು</p>
-      <a class="btn btn-gold" href="https://yakshavahini.blogspot.com" target="_blank" rel="noopener">ಬ್ಲಾಗ್‌ಗೆ ಭೇಟಿ ನೀಡಿ</a>
-    </div>
-  `;
-  document.body.appendChild(overlay);
-  document.body.style.overflow = "hidden";
-  initCarousel(PRELAUNCH_SLIDES, "prelaunch-carousel");
-
-  // Hidden bypass: 5 clicks on the message text (within 1.5s of each other) dismisses the overlay.
-  let clickCount = 0;
-  let lastClickTime = 0;
-  overlay.querySelector(".prelaunch-bypass").addEventListener("click", () => {
-    const now = Date.now();
-    clickCount = now - lastClickTime > 1500 ? 1 : clickCount + 1;
-    lastClickTime = now;
-    if (clickCount >= 5) {
-      overlay.remove();
-      document.body.style.overflow = "";
-    }
-  });
-}
-
 // ---------- Reusable image carousel + Lightbox (click-to-zoom viewer) ----------
-// Used by the homepage hero slideshow and the pre-launch overlay gallery.
+// Used by the homepage hero slideshow.
 
 function resolveImageSrc(file, basePath) {
   return /^https?:\/\//.test(file) ? file : `${basePath}${encodeURIComponent(file)}`;
