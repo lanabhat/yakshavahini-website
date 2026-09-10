@@ -44,6 +44,10 @@ function renderProjectDetail(slug, projectsData, pagesData) {
   const extraLinkButtons = (page.links || []).map((l) => `
     <a class="btn btn-gold" href="${l.url}" target="_blank" rel="noopener">${bi(l.label)}</a>
   `).join("");
+  const blogLink = summary.blogUrl
+    ? `<a class="card-link" href="${summary.blogUrl}" target="_blank" rel="noopener">${bi({ kn: "ಬ್ಲಾಗ್ ನೋಡಿ", en: "Visit blog" })} →</a>`
+    : "";
+  const ctaRow = extraLinkButtons || blogLink ? `<div class="project-detail-cta" data-rv>${extraLinkButtons}${blogLink}</div>` : "";
 
   el.innerHTML = `
     <a class="card-link back-link" href="index.html#projects" data-rv>${bi(pagesData.backLabel)}</a>
@@ -53,12 +57,11 @@ function renderProjectDetail(slug, projectsData, pagesData) {
       <span class="stat">${bi(summary.stat)}</span>
       <span class="coordinator">${summary.coordinator}</span>
     </div>
-    ${summary.blogUrl ? `<a class="card-link" href="${summary.blogUrl}" target="_blank" rel="noopener" data-rv>${bi({ kn: "ಬ್ಲಾಗ್ ನೋಡಿ", en: "Visit blog" })} →</a>` : ""}
     <div class="project-detail-body" data-rv>
       ${renderParagraphs(page.body)}
     </div>
     ${subsections}
-    ${extraLinkButtons ? `<div class="project-detail-cta" data-rv>${extraLinkButtons}</div>` : ""}
+    ${ctaRow}
     <p class="lang-note" lang="en" data-rv>${pagesData.languageNote?.en || ""}</p>
   `;
 }

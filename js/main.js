@@ -102,8 +102,7 @@ function renderProjects(data) {
     <div class="project-grid" data-rv>
       ${data.items.map(p => `
         <div class="project-card">
-          <div class="code">${p.code}</div>
-          <h3>${bi(p.title)}</h3>
+          <h3><span class="code">${p.code}</span> ${bi(p.title)}</h3>
           <p>${bi(p.description)}</p>
           <div class="stat">${bi(p.stat)}</div>
           <span class="coordinator">${p.coordinator}</span>

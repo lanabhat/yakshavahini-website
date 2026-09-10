@@ -45,6 +45,9 @@ function setTheme(theme) {
   document.querySelectorAll(".theme-toggle button").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.theme === theme);
   });
+  document.querySelectorAll(".theme-logo").forEach((img) => {
+    img.src = theme === "light" ? "images/yakshavahini-dark.svg" : "images/yakshavahini-gold.svg";
+  });
   localStorage.setItem("yv-theme", theme);
 }
 

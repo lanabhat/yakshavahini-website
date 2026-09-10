@@ -13,7 +13,7 @@
   },
   "items": [
     {
-      "code": "01 / KOSHA",
+      "code": "01",
       "title": {
         "kn": "ಯಕ್ಷಪ್ರಸಂಗಪಟ್ಟಿ",
         "en": "Yaksha Prasangapatti"
@@ -31,7 +31,7 @@
       "slug": "prasangapatti"
     },
     {
-      "code": "02 / KOSHA",
+      "code": "02",
       "title": {
         "kn": "ಯಕ್ಷಪ್ರಸಂಗಕೋಶ",
         "en": "Yaksha Prasangakosha"
@@ -49,7 +49,7 @@
       "slug": "prasangakosha"
     },
     {
-      "code": "03 / SCANS",
+      "code": "03",
       "title": {
         "kn": "ಪ್ರಸಂಗಪ್ರತಿ ಸಂಗ್ರಹ",
         "en": "Prasanga Prati Sangraha"
@@ -67,7 +67,7 @@
       "slug": "pratisangraha"
     },
     {
-      "code": "04 / MUSIC",
+      "code": "04",
       "title": {
         "kn": "ಯಕ್ಷಮಟ್ಟುಕೋಶ",
         "en": "Yaksha Mattukosha"
@@ -85,7 +85,7 @@
       "slug": "mattukosha"
     },
     {
-      "code": "05 / DIRECTORY",
+      "code": "05",
       "title": {
         "kn": "ಯಕ್ಷಸಂಘಟನಾಕೋಶ",
         "en": "Yaksha Sanghatanakosha"
@@ -103,7 +103,7 @@
       "slug": "sanghatanakosha"
     },
     {
-      "code": "06 / LIBRARY",
+      "code": "06",
       "title": {
         "kn": "ಯಕ್ಷಪುಸ್ತಕಕೋಶ",
         "en": "Yaksha Pustakakosha"
@@ -121,7 +121,7 @@
       "slug": "pustakakosha"
     },
     {
-      "code": "07 / CENTRE",
+      "code": "07",
       "title": {
         "kn": "ಆನ್‌ಲೈನ್ ಯಕ್ಷಗಾನ ಅಧ್ಯಯನ ಕೇಂದ್ರ",
         "en": "Online Yakshagana Study Centre"
@@ -138,7 +138,7 @@
       "slug": "adhyayanakendra"
     },
     {
-      "code": "08 / COMMUNITY",
+      "code": "08",
       "title": {
         "kn": "ಸುಹೃತ್ ಸಂವಾದ ಹಾಗೂ ತಾಳಮದ್ದಳೆ",
         "en": "Suhrut Samvada & Talamaddale"
